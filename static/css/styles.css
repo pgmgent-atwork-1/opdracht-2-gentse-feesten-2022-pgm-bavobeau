@@ -30,6 +30,24 @@ header {
 .header_top_logo {
     width: 150px;
 }
+
+.nav_items {
+    display: none;
+}
+
+.header_top_burger {
+    position: absolute;
+    top: 2.5rem;
+    right: 16px;
+    padding: 0;
+    border: 0;
+    background: 0;
+}
+
+.header_top_burger::before {
+    content: url(../img/gentse-feesten-icoontjes/hamburger.svg);
+    color: #fff;
+}
 /*#endregion header_top*/
 
 /*#region header_bottom*/
