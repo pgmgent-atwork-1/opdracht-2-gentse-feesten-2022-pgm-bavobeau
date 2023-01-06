@@ -1,0 +1,23 @@
+@font-face {
+    font-family: Stolzl;
+    src: url('../fonts/stolzl/Stolzl-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Stolzl;
+    src: url('../fonts/stolzl/Stolzl-Medium.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Stolzl;
+    src: url('../fonts/stolzl/Stolzl-Bold.ttf');
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: 'Stolzl Display';
+    src: url('../fonts/stolzl-display/Stolzl-Display-Bold.otf');
+    font-weight: bolder;
+}

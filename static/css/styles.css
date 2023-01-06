@@ -1,3 +1,68 @@
+html {
+    font: 300 20px Stolzl, sans-serif;
+}
+
 body {
     background-color: black;
+    color: white;
 }
+
+h1 {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-family: 'Stolzl Display', sans-serif;
+}
+
+/*#region header_top*/
+header {
+    padding: 0 16px;
+    overflow: hidden;
+}
+
+.header_top {
+    padding: 2.5rem 0;
+    background: url(../img/hero-mobile.jpg) top center no-repeat;
+    background-size: contain;
+    width: auto;
+    height: 550px;
+}
+
+.header_top_logo {
+    width: 150px;
+}
+/*#endregion header_top*/
+
+/*#region header_bottom*/
+.header_bottom_title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-wrapper {
+    position: relative;
+    float: right;
+    padding: 1.7rem 0;
+}
+
+.title {
+    display: inline-block;
+    background-color: black;
+    min-width: max-content;
+    padding: 0.4rem;
+    margin-right: 1rem;
+    text-align: right;
+}
+
+.title-wrapper::after {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 190px;
+    height: 100%;
+    background: #e83c3c;
+    content: '';
+    z-index: -1;
+}
+/*#endregion header_bottom*/
