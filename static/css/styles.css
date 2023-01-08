@@ -7,10 +7,21 @@ body {
     color: white;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-size: 1.8rem;
     line-height: 2.1rem;
     font-family: 'Stolzl Display', sans-serif;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
 }
 
 /*#region header_top*/
@@ -36,17 +47,45 @@ header {
 }
 
 .header_top_burger {
+    display: inline-flex;
     position: absolute;
     top: 2.5rem;
-    right: 16px;
+    right: 32px;
     padding: 0;
     border: 0;
     background: 0;
+    cursor: pointer;
+    font-size: 1.5rem;
 }
 
 .header_top_burger::before {
     content: url(../img/gentse-feesten-icoontjes/hamburger.svg);
-    color: #fff;
+    filter: invert(100%);
+}
+
+@media (min-width: 768px){
+    .header_top {
+        padding: 2.5rem 0;
+        background: url(../img/hero-tablet.jpg) top left no-repeat;
+        height: 800px;
+    }
+    .header_top_search {
+        position: absolute;
+        top: 0;
+        right: 16px;
+        width: 300px;
+        height: 7rem;
+        padding: 2.5rem 2rem;
+        background: #e83c3c;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header_top_burger {
+        right: calc(1.8rem + 16px);
+    }
+    .header_top_burger::before {
+        filter: invert(0%);
+    }
 }
 /*#endregion header_top*/
 
@@ -69,6 +108,7 @@ header {
     padding: 0.4rem;
     margin-right: 1rem;
     text-align: right;
+    float: right;
 }
 
 .title-wrapper::after {
@@ -82,5 +122,23 @@ header {
     background: #e83c3c;
     content: '';
     z-index: -1;
+}
+
+@media (min-width: 768px) {
+    .header_bottom {
+        position: absolute;
+        top: 5rem;
+        right: 16px;
+        z-index: 1;
+    }
+    .title-wrapper {
+        padding: 2.5rem 0;
+    }
+    .title-wrapper::after {
+        width: 300px;
+    }
+    .cta {
+        width: 500px;
+    }
 }
 /*#endregion header_bottom*/
