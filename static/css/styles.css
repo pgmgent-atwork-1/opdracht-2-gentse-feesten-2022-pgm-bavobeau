@@ -64,27 +64,6 @@ header {
     width: 150px;
 }
 
-.nav_items {
-    display: none;
-}
-
-.header_top_burger {
-    display: inline-flex;
-    position: absolute;
-    top: 50px;
-    right: 30px;
-    padding: 0;
-    border: 0;
-    background: 0;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.header_top_burger::before {
-    content: url(../img/gentse-feesten-icoontjes/hamburger.svg);
-    filter: invert(100%);
-}
-
 @media (min-width: 768px){
     .header_top {
         padding: 50px 0;
@@ -102,14 +81,70 @@ header {
         display: flex;
         justify-content: flex-end;
     }
-    .header_top_burger {
-        right: 50px;
-    }
     .header_top_burger::before {
         filter: invert(0%);
     }
 }
 /*#endregion header_top*/
+
+/*#region hamburger*/
+.hamburger {
+    display: inline-flex;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    padding: 0;
+    border: 0;
+    background: 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.close {    
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    padding: 0;
+    border: 0;
+    background: 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.hamburger::before {
+    content: url(../img/gentse-feesten-icoontjes/hamburger.svg);
+    filter: invert(100%);
+}
+
+.close::before {
+    content: url(../img/gentse-feesten-icoontjes/cross.svg);
+}
+
+.header_top_nav {
+    position: fixed;
+    transform: translateY(-100%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: #e83c3c;
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+}
+
+.showMenu {
+    transform: translateY(0);
+}
+
+@media (min-width: 768px){
+    .hamburger {
+        right: 50px;
+    }
+}
+
+/*#endregion hamburger*/
 
 /*#region header_bottom*/
 .header_bottom_title {
