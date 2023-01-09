@@ -64,6 +64,10 @@ header {
     width: 150px;
 }
 
+.header_top_nav {
+    display: none;
+}
+
 @media (min-width: 768px){
     .header_top {
         padding: 50px 0;
@@ -120,7 +124,7 @@ header {
     content: url(../img/gentse-feesten-icoontjes/cross.svg);
 }
 
-.header_top_nav {
+.hamburger_nav {
     position: fixed;
     transform: translateY(-100%);
     top: 0;
