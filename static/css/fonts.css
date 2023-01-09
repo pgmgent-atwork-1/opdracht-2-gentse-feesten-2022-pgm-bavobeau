@@ -1,19 +1,22 @@
 @font-face {
-    font-family: Stolzl;
-    src: url('../fonts/stolzl/Stolzl-Regular.ttf');
+    font-family: 'Stolzl';
+    src: url('../fonts/stolzl/Stolzl-Regular.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: Stolzl;
-    src: url('../fonts/stolzl/Stolzl-Medium.ttf');
+    font-family: 'Stolzl';
+    src: url('../fonts/stolzl/Stolzl-Medium.ttf') format('truetype');
     font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: Stolzl;
-    src: url('../fonts/stolzl/Stolzl-Bold.ttf');
+    font-family: 'Stolzl';
+    src: url('../fonts/stolzl/Stolzl-Bold.ttf') format('truetype');
     font-weight: bolder;
+    font-style: normal;
 }
 
 @font-face {
