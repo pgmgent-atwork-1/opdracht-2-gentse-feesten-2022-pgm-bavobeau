@@ -1,18 +1,14 @@
 const menu = document.querySelector(".hamburger_nav");
 const hamburger= document.querySelector(".hamburger");
-const closeBurger= document.querySelector(".close");
 
 function toggleMenu() {
   if (menu.classList.contains("showMenu")) {
     menu.classList.remove("showMenu");
-    closeBurger.style.display = "none";
-    menuIcon.style.display = "block";
+    hamburger.classList.remove("cross");
   } else {
     menu.classList.add("showMenu");
-    closeBurger.style.display = "block";
-    menuIcon.style.display = "none";
+    hamburger.classList.add("cross");
   }
 }
 
-closeBurger.addEventListener("click", toggleMenu);
 hamburger.addEventListener("click", toggleMenu);
