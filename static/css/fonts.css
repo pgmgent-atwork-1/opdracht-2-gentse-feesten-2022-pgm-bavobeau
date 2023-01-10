@@ -1,21 +1,21 @@
 @font-face {
     font-family: 'Stolzl';
     src: url('../fonts/stolzl/Stolzl-Regular.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Stolzl';
     src: url('../fonts/stolzl/Stolzl-Medium.ttf') format('truetype');
-    font-weight: bold;
+    font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Stolzl';
     src: url('../fonts/stolzl/Stolzl-Bold.ttf') format('truetype');
-    font-weight: bolder;
+    font-weight: 700;
     font-style: normal;
 }
 

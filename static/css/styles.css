@@ -7,6 +7,19 @@ body {
   color: white;
 }
 
+/*#region code from w3schools.com*/
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+/*#endregion code from w3schools.com*/
+
 header, main {
   position: relative;
   max-width: 1440px;
@@ -56,6 +69,7 @@ h2 {
 
 /*#region header*/
 .header {
+  position: relative;
   padding: 50px 0;
   background: url(../img/hero-mobile.jpg) top center no-repeat;
   background-size: contain;
@@ -73,8 +87,39 @@ h2 {
 }
 
 .header_nav {
+  position: absolute;
   display: none;
+  margin-top: 20px;
+  margin-left: 70px;
 }
+
+.nav_items {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav_item {
+  display: none;
+  text-decoration: none;
+  color: white; 
+  padding: 0 22px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.header_search {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.header_search .nav_item {
+  color: black;
+}
+
 
 @media (min-width: 768px) {
   .header {
@@ -85,11 +130,19 @@ h2 {
   .header_search {
     position: absolute;
     top: 0;
-    right: 16px;
+    right: 0;
     width: 300px;
     height: 140px;
     padding: 36px 30px;
     background: #e83c3c;
+  }
+  .search {
+    display: flex;
+    margin-right: 80px;
+    margin-left: 20px;
+    width: 21px;
+    font-weight: 700;
+    align-items: center;
   }
 }
 
@@ -107,6 +160,9 @@ h2 {
     padding: 50px 40px;
   }
   .header_nav {
+    display: inline-block;
+  }
+  .nav_item {
     display: inline-block;
   }
 }
@@ -128,6 +184,7 @@ h2 {
 .hamburger::before {
   content: url(../img/gentse-feesten-icoontjes/hamburger.svg);
   filter: invert(100%);
+  font-weight: 400;
 }
 
 .cross::before {
@@ -155,7 +212,7 @@ h2 {
 
 @media (min-width: 768px) {
   .hamburger {
-    right: 50px;
+    right: 30px;
   }
   .hamburger::before {
     filter: invert(0%);
