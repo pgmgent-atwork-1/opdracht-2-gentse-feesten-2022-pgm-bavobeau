@@ -461,6 +461,37 @@ h3 {
 /*#endregion days grid*/
 
 /*#region news*/
+.news {
+  position: relative;
+}
+
+.category_title {
+  display: inline-block;
+  position: relative;
+  margin-left: -20px;
+}
+
+.category_title h2 {
+  font-size: 70px;
+  line-height: 90px;
+  display: inline-block;
+  position: relative;
+  padding: 0 20px;
+  background: #000;
+}
+
+.category_title::before {
+  display: inline-block;
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  width: 100%;
+  height: 90px;
+  background: #e83c3c;
+  content: '';
+  z-index: -1;
+}
+
 .cta_news {
   width: max-content;
   padding: 20px 30px;
