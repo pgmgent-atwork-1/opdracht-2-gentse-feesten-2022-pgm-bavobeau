@@ -315,10 +315,6 @@ h3 {
   justify-content: center;
 }
 
-.cta_link:hover .arrow-shaft {
-  width: 120px;
-}
-
 .cta_text {
   color: white;
   margin: 40px;
@@ -549,9 +545,15 @@ h3 {
   left: 14px;
 }
 
+.news .image {
+  height: 250px;
+}
+
 .cta_news {
+  margin-top: 40px;
   width: max-content;
-  padding: 20px 30px;
+  padding: 16px 24px;
+  line-height: 30px;
   border: 1px solid white;
 }
 
@@ -559,6 +561,7 @@ h3 {
   color: white;
   font-weight: 600;
   font-size: 18px;
+  text-transform: uppercase;
 }
 /*#endregion news*/
 
