@@ -1,5 +1,5 @@
 const menu = document.querySelector(".hamburger_nav");
-const hamburger= document.querySelector(".hamburger");
+const hamburger = document.querySelector(".hamburger");
 
 function toggleMenu() {
   if (menu.classList.contains("showMenu")) {
