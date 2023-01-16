@@ -14,7 +14,7 @@
         <div class="header">
             <div class="header_logo">
                 <a href="index.html">
-                    <img src="./static/img/GF-Logo-inverse.svg" alt="GF-Logo" class="gf_logo">
+                    <img src="/static/img/GF-logo-inverse.svg" alt="GF-Logo" class="gf_logo">
                 </a>
             </div>
             <nav class="header_nav">
@@ -136,7 +136,7 @@
                 <li><a href="#">Programma</a></li>
                 <li><a href="#">Praktisch</a></li>
                     <ul>
-                        <li><a href="#" class="day">Vrijdag 15 juli</a></li>
+                        <li><a href="/events/day.html?day=15" class="day">Vrijdag 15 juli</a></li>
                         <li><a href="#" class="day">Zaterdag 16 juli</a></li>
                         <li><a href="#" class="day">Zondag 17 juli</a></li>
                         <li><a href="#" class="day">Maandag 18 juli</a></li>
@@ -192,11 +192,12 @@
                     <h2>Blijf op de hoogte</h2>
                     <p>Schrijf je in op de nieuwsbrief van de Gentse Feesten</p>
                 </div> 
-                <div class="newsletter_subscribe">
-
-                </div>
+                <form class="newsletter_subscribe">
+                    <input placeholder="Jouw e-mailadres" type="email" maxlength="64" required="required">
+                    <button class="red_button">Inschrijven</button>
+                </form>
                 <div class="newsletter_privacy">
-                    <p>De stad Gent zal de persoonsgegevens die je invult met respect voor jouw <a href="#" class="white">privacy</a> behandelen</p>
+                    <span>De stad Gent zal de persoonsgegevens die je invult met respect voor jouw <a href="#" class="white">privacy</a> behandelen</span>
                 </div>
             </div>
         </section>
