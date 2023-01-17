@@ -27,7 +27,7 @@ header, main {
   overflow-x: hidden;
 }
 
-header, footer {
+header {
   padding: 0 16px;
 }
 
@@ -690,3 +690,92 @@ a:hover .arrow {
 }
 /*#endregion disclaimer*/
 
+/*#region footer_top*/
+.footer_top {
+  background-color: #e83c3c;
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+
+.footer_top ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.socials {
+  margin-bottom: 40px;
+}
+
+.socials ul li { 
+  height: 40px;
+  width: 40px;
+  margin-right: 16px;
+  background-color: #000;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials ul li a {
+  filter: invert(100%);
+}
+
+.footer_logo {
+  width: fit-content;
+  margin-bottom: 70px;
+}
+
+.footer_logo img {
+  width: 150px;
+}
+
+.content {
+  margin-bottom: 100px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.content p {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.content hr {
+  height: 2px;
+  margin: 20px 0;
+  border-color: #000;
+  background-color: #000;
+}
+
+.content .date {
+  font-weight: 400;
+}
+
+.hashtag {
+  margin-bottom: 30px;
+  font-family: "Stolzl Display", sans-serif;
+  font-size: 30px;
+  font-weight: 700
+}
+
+.partners {
+  margin-bottom: 24px;
+}
+
+.partners ul {
+  max-width: 300px;
+  justify-content: space-between;
+}
+
+.partners img {
+  height: 40px;
+}
+/*#endregion footer_top*/
+
+/*#region footer_bottom*/
+
+/*#endregion footer_bottom*/
