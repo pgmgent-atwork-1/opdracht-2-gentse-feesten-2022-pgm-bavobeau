@@ -753,6 +753,7 @@ a:hover .arrow {
 
 .content .date {
   font-weight: 400;
+  text-transform: none;
 }
 
 .hashtag {
@@ -777,5 +778,37 @@ a:hover .arrow {
 /*#endregion footer_top*/
 
 /*#region footer_bottom*/
+.footer_bottom {
+  padding: 24px 16px 8px 16px;
+}
 
+.footer_bottom a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer_bottom ul:last-child::after {
+  display: inline-block;
+  content: url(../img/gentse-feesten-icoontjes/external-link.svg);
+  transform: scale(.4);
+  filter: invert(60%);
+  margin-left: -10px;
+}
+
+.disclaimer ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.disclaimer li {
+  padding-right: 10px;
+  height: fit-content;
+}
+
+.disclaimer p {
+  line-height: 28px;
+}
 /*#endregion footer_bottom*/
