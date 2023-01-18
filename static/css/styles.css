@@ -946,7 +946,7 @@ a:hover .arrow {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1042px) {
   .disclaimer nav {
     width: 30%;
   }
