@@ -64,6 +64,14 @@ h3 {
     font-size: 40px;
     line-height: 60px;
   }
+  h2 {
+    font-size: 35px;
+    line-height: 42px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 
 /*#region header*/
@@ -610,6 +618,15 @@ a:hover .arrow {
   height: 456px;
 }
 
+.news_items::after {
+  display: inline-flex;
+  background: url(../img/bg-twitterfeed.jpg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+  content: '';
+}
+
 .news_article {
   border: 1px solid white;
   height: 154px;
@@ -617,11 +634,14 @@ a:hover .arrow {
 
 .news_link {
   position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .news_link h3 {
   padding: 14px 14px 100px 14px;
-}
+} 
 
 .news_link .arrow {
   position: absolute;
@@ -629,12 +649,8 @@ a:hover .arrow {
   left: 14px;
 }
 
-.news .image {
-  height: 250px;
-}
-
 .cta_news {
-  margin-top: 40px;
+  margin-top: 290px;
   width: max-content;
   padding: 16px 24px;
   line-height: 30px;
@@ -647,6 +663,52 @@ a:hover .arrow {
   font-size: 18px;
   text-transform: uppercase;
 }
+
+@media (min-width: 768px) {
+  .category_title {
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 240px;
+    left: 0;
+    width: 20%;
+    margin-left: 5px;
+  }
+  .category_title h2 {
+    font-size: 100px;
+    line-height: 150px;
+  }
+  .category_title::before {
+    position: absolute;
+    bottom: 80px;
+    left: 50px;
+    width: 390px;
+    height: 120px;
+  }
+  .news_items {
+    max-width: 80%;
+    margin-right: 0;
+    margin-left: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+  .news_items .news_article:last-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+  }
+  .news_article {
+    min-height: 240px;
+  }
+  .news_link .arrow {
+    bottom: 40px;
+  }
+  .news_items::after {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .cta_news {
+    margin-left: 20%;
+  }
+}
 /*#endregion news*/
 
 /*#region content_bottom*/
@@ -658,7 +720,6 @@ a:hover .arrow {
 .cta_media {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   padding: 0px 16px 240px 16px;
 }
 
@@ -668,26 +729,24 @@ a:hover .arrow {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
+  width: fit-content;
   padding: 20px 30px;
   text-transform: capitalize;
-  gap: 20%;
-  margin-right: 20px;
+  margin: 0 20px 35px 0;
 }
 
 .red_cta h2 {
   width: fit-content;
 }
 
-.red_cta .arrow_right {
-  position: relative;
-  width: 30%;
-  left: -20px;
+.red_cta .arrow {
+  margin: 0 20px;
 }
 
-.red_cta .arrow_left {
-  position: relative;
-  width: 80px;
-  right: 40px;
+@media (min-width: 768px) {
+  .cta_media {
+    padding: 0 16px 40px 16px;
+  }
 }
 /*#endregion content_bottom*/
 
@@ -707,7 +766,7 @@ a:hover .arrow {
 }
 
 .newsletter_subscribe {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .newsletter_subscribe input {
@@ -726,6 +785,7 @@ a:hover .arrow {
 .red_button {
   padding: 15px 30px;
   font-size: 18px;
+  height: 54px;
   margin: 0;
   background-color: #e83c3c;
   border: 1px solid #e83c3c;
@@ -734,6 +794,38 @@ a:hover .arrow {
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .newsletter {
+    padding-bottom: 190px;
+    background-size: contain;
+  }
+  .newsletter_subscribe {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+  .red_button {
+    width: fit-content;
+  }
+  .newsletter_intro p {
+    margin-bottom: 70px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .newsletter {
+    padding-bottom: 320px;
+  }
+  .newsletter_subscribe {
+    flex-direction: row;
+    width: 50%;
+  }
+  .newsletter_subscribe input {
+    width: 60%;
+    margin-right: 20px
+  };
 }
 /*#endregion newsletter*/
 
@@ -930,6 +1022,7 @@ a:hover .arrow {
 
 .disclaimer p {
   line-height: 28px;
+  font-size: 13px;
 }
 
 @media (min-width: 768px) {
@@ -951,5 +1044,4 @@ a:hover .arrow {
     width: 30%;
   }
 }
-
 /*#endregion footer_bottom*/
