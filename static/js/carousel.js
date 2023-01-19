@@ -1,4 +1,5 @@
 const events = document.querySelector(".events");
+const event = document.querySelector(".event");
 
 //fetching data for events
 const fetchDataEvents = async () => {

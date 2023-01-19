@@ -462,12 +462,11 @@ a:hover .arrow {
 .events {
   display: inline-flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
   flex-direction: row;
   list-style: none;
   margin: 0 -10px;
   width: 2544px;
-  transform: translate3d(0px, 0px, 0px);
+  overflow-x: scroll; 
 }
 
 .event {
