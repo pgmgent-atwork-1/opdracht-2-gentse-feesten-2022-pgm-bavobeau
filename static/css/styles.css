@@ -872,3 +872,171 @@ a:hover .arrow {
   }
 }
 /*#endregion news*/
+
+/*#region filter_title*/
+.filter {
+  position: relative;
+  padding: 60px 16px 0 16px;
+}
+
+.category_title {
+  display: none;
+  margin-left: -30px;
+}
+
+.category_title h2 {
+  font-size: 70px;
+  line-height: 90px;
+  display: inline-block;
+  position: relative;
+  padding: 0 20px;
+  background: #000;
+}
+
+.category_title::before {
+  display: inline-block;
+  position: absolute;
+  background: #e83c3c;
+  content: '';
+  z-index: -1;
+}
+
+@media (min-width: 1280px) {
+  .category_title {
+    display: block;
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 220px;
+    left: 0;
+    width: 20%;
+  }
+  .category_title h2 {
+    font-size: 100px;
+    line-height: 150px;
+  }
+  .category_title::before {
+    bottom: 80px;
+    left: -50px;
+    width: 390px;
+    height: 120px;
+  }
+}
+/*#endregion filter*/
+
+/*#region filters*/
+.filters {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.filter_categories {
+  list-style: none;
+  display: flex;
+}
+
+.filters form {
+  border: 1px solid #fff;
+  padding: 24px 18px;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.filter input {
+  margin-right: 40px;
+}
+
+.filter label {
+  margin-left: -30px;
+}
+
+#rolstoel::after {
+  display: block;
+  transform: scale(0.65);
+  content: url(../img/gentse-feesten-icoontjes/wheelchair.svg);
+  filter: invert(100%);
+  margin-left: 20px;
+  margin-top: -5px;
+}
+
+.filter_categories li {
+  width: 25%;
+  border: 1px solid #fff;
+}
+
+.chosen {
+  background-color: #fff;
+}
+
+#party::before {
+  display: block;
+  transform: scale(0.65);
+  content: url(../img/gentse-feesten-icoontjes/marker.svg);
+  filter: invert(100%);
+}
+
+#category::before {
+  display: block;
+  transform: scale(0.65);
+  content: url(../img/gentse-feesten-icoontjes/category.svg);
+  filter: invert(100%);
+}
+
+#time::before {
+  display: block;
+  transform: scale(0.65);
+  content: url(../img/gentse-feesten-icoontjes/clock.svg);
+  filter: invert(100%);
+}
+
+#kids::before {
+  display: block;
+  transform: scale(0.65);
+  content: url(../img/gentse-feesten-icoontjes/balloon.svg);
+  filter: invert(100%);
+}
+
+.filter_categories a {
+  font-size: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.chosen a {
+  filter: invert(100%);
+}
+
+.category_items {
+  border: 1px solid #fff;
+  border-bottom: none;
+  list-style: none;
+  padding: 30px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.category_items li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.category_items li::before {
+  content: url(../img/gentse-feesten-icoontjes/category.svg); 
+  filter: invert(100%);
+  transform: scale(0.65);
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.preview {
+  border: 1px solid #fff;
+  border-top: none;
+}
+/*#endregion filters*/
+
+/*#region*/
+
+/*#endregion*/
