@@ -61,6 +61,10 @@ h3 {
   }
 }
 
+@media (min-width: 1280px) {
+
+}
+
 /*#region header*/
 .header {
   position: relative;
@@ -525,7 +529,6 @@ a:hover .arrow {
   list-style: none;
   margin: 0 -10px;
   width: 2544px;
-  overflow-x: scroll; 
 }
 
 .event {
@@ -842,6 +845,37 @@ a:hover .arrow {
   }
   .cta_news {
     margin-left: 20%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .news_items {
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .news_article {
+    min-height: 300px;
+  }
+  .news_items::after {
+    width: 500px;
+    height: auto;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .cta_news {
+    margin-top: 175px;
+  }
+  .category_title {
+    top: 360px;
+  }
+  .category_title::before {
+    width: 570px;
+    left: 60px;
+  }
+  .category_title h2 {
+    font-size: 150px;
+    line-height: 180px;
   }
 }
 /*#endregion news*/
