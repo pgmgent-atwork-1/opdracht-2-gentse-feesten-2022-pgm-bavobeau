@@ -556,6 +556,8 @@ a:hover .arrow {
   line-height: 20px;
   display: inline-block;
   padding: 5px 10px;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 0 #e83c3c;
 }
 
 .red_field {
@@ -563,6 +565,11 @@ a:hover .arrow {
   color: #000;
   display: inline-block;
   padding: 5px 10px;
+}
+
+.event_link:hover .event_info {
+  box-shadow: -20px 20px 0 0 #e83c3c;
+  transform: translate(32px, -32px);
 }
 
 @media (min-width: 768px) {
@@ -634,6 +641,14 @@ a:hover .arrow {
 
 .day_long {
   font-size: 16px;
+}
+
+.day:hover {
+  background-color: #000;
+}
+
+.day:hover .day_text {
+  color: #fff;
 }
 
 @media (min-width: 768px) {
