@@ -114,6 +114,14 @@ h3 {
   color: black;
 }
 
+.nav_items li:hover .nav_item::after {
+  display: block;
+  width: 25px;
+  margin: 6px 0 0;
+  border-top: solid 4px #fff;
+  content: '';
+} 
+
 @media (min-width: 768px) {
   .header {
     padding: 50px 0;
