@@ -183,9 +183,9 @@ h3 {
     display: flex;
     margin-right: 80px;
     margin-left: 20px;
-    width: 21px;
     font-weight: 700;
     align-items: center;
+    transform: scale(0.8);
   }
 }
 
@@ -934,12 +934,9 @@ footer {
 
 .category_title {
   display: none;
-  margin-left: -30px;
 }
 
 .category_title h2 {
-  font-size: 70px;
-  line-height: 90px;
   display: inline-block;
   position: relative;
   padding: 0 20px;
@@ -949,6 +946,10 @@ footer {
 .category_title::before {
   display: inline-block;
   position: absolute;
+  bottom: 80px;
+  width: 550px;
+  left: -60px;
+  height: 200px;
   background: #e83c3c;
   content: '';
   z-index: -1;
@@ -956,22 +957,21 @@ footer {
 
 @media (min-width: 1280px) {
   .category_title {
-    display: block;
     position: absolute;
     transform: rotate(-90deg);
-    top: 220px;
+    top: 375px;
     left: 0;
     width: 20%;
+    margin-left: 5px;
+    display: block;
   }
   .category_title h2 {
-    font-size: 100px;
-    line-height: 150px;
+    font-size: 150px;
+    line-height: 180px;
   }
-  .category_title::before {
-    bottom: 80px;
-    left: -50px;
-    width: 390px;
-    height: 120px;
+  .filter_box {
+    margin-left: 240px;
+    margin-top: 60px;
   }
 }
 /*#endregion filter*/
