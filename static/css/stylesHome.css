@@ -823,6 +823,14 @@ a:hover .arrow {
   color: #000;
 }
 
+.news_article:hover {
+  background-color: #e83c3c;
+}
+
+.news_article:hover h3, .news_article:hover .arrow{
+  filter: invert(100%);
+}
+
 @media (min-width: 768px) {
   .category_title {
     position: absolute;
@@ -984,6 +992,12 @@ a:hover .arrow {
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.red_button:hover {
+  background-color: #fff;
+  border-color: #fff;
 }
 
 @media (min-width: 768px) {

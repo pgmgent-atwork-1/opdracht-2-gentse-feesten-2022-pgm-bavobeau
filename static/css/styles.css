@@ -600,6 +600,12 @@ a:hover .arrow {
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.red_button:hover {
+  background-color: #fff;
+  border-color: #fff;
 }
 
 @media (min-width: 768px) {
