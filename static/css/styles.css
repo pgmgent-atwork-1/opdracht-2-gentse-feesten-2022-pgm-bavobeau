@@ -7,7 +7,7 @@ body {
   color: white;
 }
 
-header, main, footer {
+header, main, .footer_top, .footer_bottom .disclaimer  {
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
@@ -655,6 +655,10 @@ a:hover .arrow {
 /*#endregion disclaimer*/
 
 /*#region footer_top*/
+footer {
+  background-color: #e83c3c;
+}
+
 .footer_top {
   background-color: #e83c3c;
   padding: 40px 16px;
@@ -812,6 +816,7 @@ a:hover .arrow {
 /*#region footer_bottom*/
 .footer_bottom {
   padding: 24px 16px 8px 16px;
+  background-color: #000;
 }
 
 .footer_bottom a {
