@@ -124,13 +124,21 @@ h3 {
   color: black;
 }
 
-.nav_items li:hover .nav_item::after {
+.search:hover {
+  filter: invert(100%);
+}
+
+.header_search .nav_item:hover {
+  color: white;
+}
+
+.nav_item:hover::after {
   display: block;
   width: 25px;
   margin: 6px 0 0;
   border-top: solid 4px #fff;
   content: '';
-} 
+}
 
 .active::after {
   display: block;
@@ -257,6 +265,10 @@ h3 {
   .hamburger::before {
     filter: invert(0%);
   }
+}
+
+.hamburger:hover::before {
+  filter: invert(100%);
 }
 /*#endregion hamburger*/
 
