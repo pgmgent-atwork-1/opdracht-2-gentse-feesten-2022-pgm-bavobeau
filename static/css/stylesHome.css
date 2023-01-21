@@ -1080,6 +1080,14 @@ a:hover .arrow {
   align-items: center;
 }
 
+.socials ul li:hover {
+  background-color: #fff;
+}
+
+.socials ul li:hover a{
+  filter: invert(0);
+}
+
 .footer_logo {
   width: fit-content;
   margin-bottom: 70px;
@@ -1227,6 +1235,10 @@ a:hover .arrow {
 .disclaimer p {
   line-height: 28px;
   font-size: 13px;
+}
+
+.disclaimer li:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
