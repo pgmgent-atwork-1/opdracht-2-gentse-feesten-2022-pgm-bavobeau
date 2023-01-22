@@ -21,10 +21,9 @@ const fetchDataEvents = async () => {
 const renderEvents = (event) => {
 	let i = Math.floor(Math.random() * event.length + 1);
 	let j = i + 8;
-	event.slice(i,j).map((event_element) => {
-		let createEvent = document.createElement("li");
-		createEvent.className = `event`;
-		createEvent.innerHTML = `
+	const html = event.slice(i,j).map((event_element) => {
+		return`
+		<li class="event">
 			<a href="#" class="event_link">
 				<div class="event_image">
 					<img src="${event_element.image.full}" class="event_image">
@@ -35,10 +34,11 @@ const renderEvents = (event) => {
 					<div class="red_field">${event_element.location}</div>
 					<p>${event_element.start}</p>
 				</div>
-			</a>`
-		events.appendChild(createEvent);
-	})
-	
+			</a>
+		</li>`
+	}).join("");
+
+	event.innerHTML = html;
 };
 
 // fetch data for news
@@ -57,16 +57,17 @@ const fetchDataNews = async () => {
 };
 
 const renderNews = (data) => {
-    data.slice(0, 3).map((news_element) => {
-        let createNews = document.createElement("li");
-        createNews.className = "news_article"
-        createNews.innerHTML = `
+    const html = data.slice(0, 3).map((news_element) => {
+        return`
+		  <li class="news_article">
         <a href="news.html" class="news_link">
             <h3>${news_element.title}</h3>
             <div class="arrow"></div>
-        </a>`
-        news.appendChild(createNews);
-    })
+        </a>
+		  </li>`
+    }).join("");
+
+	news.innerHTML = html;
 };
 
 fetchDataEvents();
