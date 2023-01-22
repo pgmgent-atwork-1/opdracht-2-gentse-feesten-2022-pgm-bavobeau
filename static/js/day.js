@@ -67,7 +67,6 @@
             return event.day === day && event.category.includes(category);
           });
           
-          console.log(filteredEvents);
           return `
             <div class="list_title"> 
               <h2 id="${category}">${category}</h2>

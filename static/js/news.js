@@ -16,19 +16,20 @@ const fetchDataNews = async () => {
 };
 
 const renderNews = (data) => {
-    data.map((news_element) => {
-        let createNews = document.createElement("li");
-        createNews.className = "news_article"
-        createNews.innerHTML = `
-        <a href="news.html" class="news_link">
-            <div class="news_title">
-                <h3>${news_element.title}</h3>
-                <div class="arrow"></div>
-            </div>
-            <img src="https://www.pgm.gent/data/gentsefeesten/${news_element.picture.large}" class="news_image">
-        </a>`
-        news.appendChild(createNews);
-    })
+    const html = data.map((news_element) => {
+        return `
+        <li class="news_article">
+            <a href="news.html" class="news_link">
+                <div class="news_title">
+                    <h3>${news_element.title}</h3>
+                    <div class="arrow"></div>
+                </div>
+                <img src="https://www.pgm.gent/data/gentsefeesten/${news_element.picture.large}" class="news_image">
+            </a>
+        </li>`
+    }).join("");
+
+    news.innerHTML = html;
 };
 
 fetchDataNews();
