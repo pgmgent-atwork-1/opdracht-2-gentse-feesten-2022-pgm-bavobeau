@@ -423,6 +423,7 @@ h3 {
     z-index: 1;
   }
   .title {
+    display: none;
     font-size: 40px;
     line-height: 48px;
   }
@@ -464,6 +465,101 @@ h3 {
   }
 }
 /*#endregion header_bottom*/
+
+/*#region days grid*/
+.days {
+  display: inline-flex;
+  list-style: none;
+  width: 100%;
+  height: 160px;
+  flex-wrap: wrap;
+}
+
+.day {
+  background-color: #e83c3c;
+  border-right: solid 1px #000;
+  border-bottom: solid 1px #000;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.day_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+}
+
+.day_short {
+  font-size: 22px;
+  line-height: 33px;
+  font-family: "Stolzl Display", sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.day_long {
+  font-size: 16px;
+}
+
+.day:hover {
+  background-color: #000;
+}
+
+.day:hover .day_text {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .days {
+    width: 350px;
+    height: 370px;
+    float: right;
+    margin-right: 36px;
+  }
+  .day {
+    width: 33.3%;
+  }
+  .day:nth-child(2) {
+    margin-right: 33.3%;
+  }
+  .day:nth-child(9) {
+    margin-left: 33.3%;
+  }
+  .day_short {
+    font-size: 26px;
+  }
+  .day_long {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .days {
+    width: 470px;
+    margin-right: 130px;
+  }
+  .day {
+    height: 120px;
+  }
+  .day_short {
+    font-size: 30px;
+  }
+  .day_long {
+    font-size: 18px;
+  }
+}
+/*#endregion days grid*/
 
 /*#region arrow*/
 .arrow {
