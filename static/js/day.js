@@ -1,7 +1,8 @@
 (() => {
     const $list = document.getElementById("list");
     const $categories = document.getElementById("categories");
-    const day = "15";
+    let params = new URLSearchParams(location.search);
+    let day = params.get('day');
   
     const fetchCategories = async () => {
       let response = await fetch(
@@ -21,7 +22,6 @@
       try {
         const categories = await fetchCategories();
         const events = await fetchEvents();
-        console.log(categories, events);
         renderEvents(categories, events);
         renderCategories(categories);
       } catch (error) {
@@ -45,6 +45,7 @@
       $categories.innerHTML = html;
     };
 
+    // filter events on day and per category and renders them
     const renderEvents = (categories, events) => {
       const html = categories
         .map((category) => {
@@ -54,9 +55,20 @@
   
           return `
             <h2 id="${category}">${category}</h2>
-            <ul>${filteredEvents.map((event) => {
+            <ul class="events">${filteredEvents.map((event) => {
                   return `
-                    <li>${event.title}</li>`;
+                      <li class="event">
+                        <a href="#" class="event_link">
+                          <div class="event_image">
+                            <img src="${event.image.full}" class="event_image">
+                          </div>
+                          <div class="event_info">
+                            <h3 class="event_title">${event.title}</h3>
+                            <div class="red_field">${event.location}</div>
+                            <p>${event.start}</p>
+                          </div>
+                        </a>
+                      </li>`;
                 }).join("")}
             </ul>`;
         }).join("");
