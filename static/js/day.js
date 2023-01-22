@@ -31,6 +31,20 @@
   
     fetchData();
     
+    const checkImage = (image) => {
+      if (image != null) {
+        return image.full;
+      } else {
+        return "../static/img/bg-twitterfeed.jpg";
+      }
+    };
+
+    checkTicket = (ticket) => {
+      if (ticket === "paid") {
+        return `paid`
+      } return `free`;
+    };
+
     const renderCategories = (categories) => {
       const html = categories
       .map((category) => {
@@ -52,20 +66,25 @@
           const filteredEvents = events.filter((event) => {
             return event.day === day && event.category.includes(category);
           });
-  
+          
+          console.log(filteredEvents);
           return `
-            <h2 id="${category}">${category}</h2>
+            <div class="list_title"> 
+              <h2 id="${category}">${category}</h2>
+              <a href="#filter"><img src="../static/img/gentse-feesten-icoontjes/arrow-up.svg"></a>
+            </div>
             <ul class="events">${filteredEvents.map((event) => {
                   return `
                       <li class="event">
                         <a href="#" class="event_link">
                           <div class="event_image">
-                            <img src="${event.image.full}" class="event_image">
+                            <img src="${checkImage(event.image)}" class="event_image">
                           </div>
                           <div class="event_info">
                             <h3 class="event_title">${event.title}</h3>
                             <div class="red_field">${event.location}</div>
                             <p>${event.start}</p>
+                            <img src="../static/img/gentse-feesten-icoontjes/euro.svg" class="euro ${checkTicket(event.ticket)}">
                           </div>
                         </a>
                       </li>`;

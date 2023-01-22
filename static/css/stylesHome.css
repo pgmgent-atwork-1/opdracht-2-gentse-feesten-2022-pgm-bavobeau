@@ -585,6 +585,8 @@ a:hover .arrow {
   background: #000;
   z-index: 1;
   border: 1px solid white;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 0 #e83c3c;
 }
 
 .event_info p {
@@ -592,8 +594,6 @@ a:hover .arrow {
   line-height: 20px;
   display: inline-block;
   padding: 5px 10px;
-  transition: all 0.2s ease;
-  box-shadow: 0 0 0 0 #e83c3c;
 }
 
 .red_field {
