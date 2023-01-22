@@ -1124,6 +1124,10 @@ footer {
 /*#endregion filters*/
 
 /*#region list tiles*/
+.detail {
+  padding: 0 16px;
+}
+
 #list {
   display: flex;
   flex-direction: column;
@@ -1142,11 +1146,10 @@ footer {
 }
 
 .events {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   list-style: none;
-  margin: 0 -10px;
 }
 
 .event {
@@ -1206,7 +1209,7 @@ footer {
   .event {
     width: 329px;
   }
-  .event:nth-child(odd) {
+  .grid .event:nth-child(odd) {
     margin-top: 50px;
   }
 }
@@ -1269,3 +1272,16 @@ footer {
   padding: 0 0 16px 0;
 }
 /*#endregion list grid*/
+
+/*#region more events*/
+.more  {
+  display: flex;
+  flex-direction: column;
+}
+
+.more h2 {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 100px 0 60px 0;
+}
+/*#endregion more events*/
