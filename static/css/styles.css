@@ -639,6 +639,12 @@ a:hover .arrow {
   left: -8px;
   top: 5px;
 }
+
+.black, .black::before, .black::after{
+  background-color: #000;
+  border-color: #000;
+}
+
 /*#endregion arrow*/
 
 /*#region content_bottom*/
