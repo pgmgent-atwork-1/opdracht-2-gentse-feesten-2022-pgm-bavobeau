@@ -14,7 +14,7 @@
   
     const fetchEvents = async () => {
       let response = await fetch(
-        "https://www.pgm.gent/data/gentsefeesten/events_500.json"
+        "https://www.pgm.gent/data/gentsefeesten/events.json"
       );
       return await response.json();
     };
