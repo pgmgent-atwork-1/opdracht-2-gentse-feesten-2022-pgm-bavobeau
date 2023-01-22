@@ -1099,14 +1099,14 @@ footer {
   border: none;
 }
 
-.grid::before {
+.preview .grid::before {
   display: block;
   content: url(../img/gentse-feesten-icoontjes/raster.svg);
   filter: invert(100%);
   transform: scale(0.6);
 }
 
-.list::before {
+.preview .list::before {
   display: block;
   content: url(../img/gentse-feesten-icoontjes/list.svg);
   filter: invert(100%);
@@ -1117,7 +1117,7 @@ footer {
   background-color: #e83c3c;
 }
 
-.on::before {
+.preview .on::before {
   filter: invert(0);
 }
 
@@ -1159,7 +1159,7 @@ footer {
   color: white;
 }
 
-.on .event_image {
+.grid .event_image {
   position: relative;
   background-size: fill;
   background-position-y: top;
@@ -1171,7 +1171,7 @@ footer {
   aspect-ratio: 1.4 / 1;
 }
 
-.on .event_info {
+.grid .event_info {
   position: relative;
   margin-top: -50px;
   margin-right: 70px;
@@ -1190,14 +1190,14 @@ footer {
   padding: 5px 10px;
 }
 
-.on .red_field {
+.grid .red_field {
   background-color: #e83c3c;
   color: #000;
   display: inline-block;
   padding: 5px 10px;
 }
 
-.on .event_link:hover .event_info {
+.grid .event_link:hover .event_info {
   box-shadow: -20px 20px 0 0 #e83c3c;
   transform: translate(32px, -32px);
 }
@@ -1219,20 +1219,20 @@ footer {
 /*#endregion cards*/
 
 /*#region list grid*/
-.off .events {
+.list .events {
   width: 100%;
 }
 
-.off .event {
+.list .event {
   padding: 0;
   width: 100%;
 }
 
-.off .event_image {
+.list .event_image {
   display: none;
 }
 
-.off .event_info {
+.list .event_info {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -1241,20 +1241,20 @@ footer {
   padding: 20px;
 }
 
-.off .event_title {
+.list .event_title {
   order: 2;
 }
 
-.off .red_field {
+.list .red_field {
   order: 3;
   display: flex;
 }
 
-.off .free {
+.list .free {
   display: none;
 }
 
-.off .event_info img {
+.list .event_info img {
   position: absolute;
   filter: invert(100%);
   transform: scale(0.6);
@@ -1264,7 +1264,7 @@ footer {
   right: -14px;
 }
 
-.off p {
+.list p {
   order: 1;
   padding: 0 0 16px 0;
 }

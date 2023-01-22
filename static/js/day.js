@@ -1,8 +1,9 @@
 (() => {
     const $list = document.getElementById("list");
     const $categories = document.getElementById("categories");
+    const title = document.getElementById("header_title");
     let params = new URLSearchParams(location.search);
-    let day = params.get('day');
+    let day = params.get('day'); 
   
     const fetchCategories = async () => {
       let response = await fetch(
@@ -22,6 +23,7 @@
       try {
         const categories = await fetchCategories();
         const events = await fetchEvents();
+        console.log(events);
         renderEvents(categories, events);
         renderCategories(categories);
       } catch (error) {
@@ -73,9 +75,10 @@
               <a href="#filter"><img src="../static/img/gentse-feesten-icoontjes/arrow-up.svg"></a>
             </div>
             <ul class="events">${filteredEvents.map((event) => {
+                  title.innerHTML = `${event.day_of_week} ${day} juli`;
                   return `
                       <li class="event">
-                        <a href="#" class="event_link">
+                        <a href="detail.html?day=${event.day}&slug=${event.slug}" class="event_link">
                           <div class="event_image">
                             <img src="${checkImage(event.image)}" class="event_image">
                           </div>
@@ -94,3 +97,24 @@
       $list.innerHTML = html;
     };
   })();
+
+const grid = document.getElementById("list");
+const grid_button = document.querySelector(".grid");
+const list_button = document.querySelector(".list");
+
+function toggleGrid() {
+  grid.classList.remove("list");
+  grid.classList.add("grid");
+  grid_button.classList.add("on");
+  list_button.classList.remove("on");
+}
+
+function toggleList() {
+  grid.classList.add("list");
+  grid.classList.remove("grid");
+  list_button.classList.add("on");
+  grid_button.classList.remove("on");
+}
+
+grid_button.addEventListener("click", toggleGrid);
+list_button.addEventListener("click", toggleList);
