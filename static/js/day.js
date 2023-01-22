@@ -23,7 +23,6 @@
       try {
         const categories = await fetchCategories();
         const events = await fetchEvents();
-        console.log(events);
         renderEvents(categories, events);
         renderCategories(categories);
       } catch (error) {

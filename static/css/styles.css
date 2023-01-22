@@ -162,7 +162,7 @@ h3 {
 
 @media (min-width: 768px) {
   header {
-    height: 300px;
+    height: 400px;
   }
   .header {
     padding: 50px 0;
@@ -195,7 +195,7 @@ h3 {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1280px) {  
   .gf_logo {
     width: 176px;
   }
@@ -418,9 +418,11 @@ h3 {
 @media (min-width: 768px) {
   .header_bottom {
     position: absolute;
+    width: 100%;
     top: 100px;
     right: 16px;
     z-index: 1;
+    padding-left: 50px;
   }
   .title {
     display: none;
@@ -428,7 +430,8 @@ h3 {
     line-height: 48px;
   }
   .title-wrapper {
-    padding: 50px 0;
+    padding: 50px 0 50px 50px;
+    width: 100%;
   }
   .title-wrapper::after {
     width: 300px;
@@ -468,10 +471,9 @@ h3 {
 
 /*#region days grid*/
 .days {
-  display: inline-flex;
+  display: none;
   list-style: none;
   width: 100%;
-  height: 160px;
   flex-wrap: wrap;
 }
 
@@ -512,29 +514,17 @@ h3 {
   font-size: 16px;
 }
 
-.day:hover {
-  background-color: #000;
-}
-
-.day:hover .day_text {
-  color: #fff;
-}
-
 @media (min-width: 768px) {
   .days {
-    width: 350px;
-    height: 370px;
+    display: flex;
+    width: 98.5%;
+    height: 100%;
     float: right;
     margin-right: 36px;
   }
   .day {
-    width: 33.3%;
-  }
-  .day:nth-child(2) {
-    margin-right: 33.3%;
-  }
-  .day:nth-child(9) {
-    margin-left: 33.3%;
+    width: 20%;
+    height: 100px;
   }
   .day_short {
     font-size: 26px;
@@ -542,15 +532,30 @@ h3 {
   .day_long {
     font-size: 14px;
   }
+  .day:nth-child(4), .day:nth-child(5), .day:nth-child(1n+9) {
+    filter: invert(100%);
+    background-color: #fff;
+  }
+  .day:nth-child(4):hover, .day:nth-child(5):hover, .day:nth-child(1n+9):hover {
+    filter: none;
+    background-color: #e83c3c;
+  }
+}
+
+@media (min-width: 1024px) {
+  .days {
+    width: 71.5%;
+  }
 }
 
 @media (min-width: 1280px) {
   .days {
-    width: 470px;
+    width: 69%;
     margin-right: 130px;
   }
   .day {
     height: 120px;
+    width: 10%;
   }
   .day_short {
     font-size: 30px;
@@ -558,6 +563,34 @@ h3 {
   .day_long {
     font-size: 18px;
   }
+  .day:nth-child(4), .day:nth-child(5) {
+    filter: none;
+    background-color: #e83c3c;
+  }
+  .day:nth-child(1n+7) {
+    filter: invert(100%);
+    background-color: #fff;
+  }
+  .day:nth-child(1n+7):hover {
+    filter: none;
+    background-color: #e83c3c;
+  }
+  .day:nth-child(1n+7):hover .day_text{
+    filter: none;
+    color: #000;  
+  }
+  .day:nth-child(4):hover, .day:nth-child(5):hover {
+    filter: none;
+    background-color: #000;
+  }
+}
+
+.day:hover {
+  background-color: #000;
+}
+
+.day:hover .day_text {
+  color: #fff;
 }
 /*#endregion days grid*/
 
@@ -605,11 +638,6 @@ a:hover .arrow {
 .left::before {
   left: -8px;
   top: 5px;
-}
-
-.black, .black::after, .black::before {
-  border: 2px solid black;
-  background-color: #000;
 }
 /*#endregion arrow*/
 
@@ -1302,8 +1330,12 @@ footer {
 }
 
 @media (min-width: 768px) {
-  .event {
-    width: 329px;
+  .grid .events {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .grid .event {
+    width: 50%;
   }
   .grid .event:nth-child(odd) {
     margin-top: 50px;
@@ -1311,8 +1343,8 @@ footer {
 }
 
 @media (min-width: 1024px) {  
-  .event {
-    width: 441px;
+  .grid .event {
+    width: 33.3%;
   }
 }
 /*#endregion cards*/
