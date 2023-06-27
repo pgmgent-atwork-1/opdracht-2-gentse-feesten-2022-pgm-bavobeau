@@ -1,0 +1,36 @@
+:root   {
+  --red: hsl(0, 79%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+}
+
+body {
+  background-color: black;
+}
+
+.layout-container {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.padding-container {
+  padding: 0 1rem 0 1rem;
+}
+
+.icon--wh-bl {
+  filter: invert();
+}
+
+.icon--l {
+  width: 4rem;
+}
+
+.icon--s {
+  width: 1.3rem;
+}
+
+@media (min-width: 30rem) {
+  .icon--wh-bl {
+    filter: none;
+  }
+}
