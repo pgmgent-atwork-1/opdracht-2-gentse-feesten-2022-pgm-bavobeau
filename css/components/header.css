@@ -47,7 +47,7 @@
 }
 
 .title__container {
-  background: linear-gradient(90deg, hsla(0, 100%, 50%, 0) 50%, var(--red) 0%);
+  background: linear-gradient(90deg, hsla(0, 0%, 0%, 0) 50%, var(--red) 0%);
   display: flex;
   justify-content: flex-end;
   align-items: center;
