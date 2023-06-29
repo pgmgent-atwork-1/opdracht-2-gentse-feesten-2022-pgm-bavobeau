@@ -1,10 +1,14 @@
+header {
+  background: url(../../img/hero-mobile.jpg) top center no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
 .header {
   position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  background: url(../../img/hero-mobile.jpg) top center no-repeat;
-  background-size: contain;
   height: 35rem;
   padding-top: 3rem;
 }
@@ -26,7 +30,7 @@
 }
 
 .header__links {
-  padding-right: 2rem;
+  padding-right: 32px;
 }
 
 .header__links .header__link {
@@ -37,11 +41,12 @@
 }
 
 .header__hamburger {
-  padding-right: 1rem;
+  padding-right: 16px;
 }
 
 .header__bottom {
   width: 100%;
+  position: relative;
 }
 
 .title__container {
@@ -49,36 +54,57 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 1rem;
-  width: 100%;
-  height: 6rem;
+  padding-right: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-right: -16px;
 }
 
 .title {
   position: relative;
+  text-align: right;
+  line-height: 1.1;
   background-color: var(--black);
   color: var(--white);
+  padding: 10px;
 }
 
-@media (min-width: 30rem) {
-  .header {
+@media (min-width: 700px) {
+  header {
     background: url(../../img/hero-tablet.jpg) top left no-repeat;
     background-size: contain;
     height: 50rem;
+    position: relative;
+  }
+  .header {
+    position: relative;
+    height: fit-content;
   }
   .header__nav--right {
     background-color: var(--red);
-    width: 18rem;
-    padding: 4rem 1rem 3rem 1rem;
+    width: 300px;
+    padding: 64px 16px 48px 16px;
     margin-top: -3rem;
   }
   .header__links .header__link--search {
     display: block;
   }
-  .title {
+  .header__bottom {
     position: absolute;
-    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     right: 0;
+    width: 500px;
+  }
+  .title__container {
+    background-color: var(--red);
+    width: 300px;
+    float: right;
+    margin: 0;
+  }
+  .title {
+    white-space: nowrap;
   }
 }
 
@@ -88,7 +114,7 @@
   list-style: none;
   width: 100%;
   flex-wrap: wrap;
-  padding: 0;
+  padding-left: 0;
 }
 
 .day {
