@@ -41,11 +41,37 @@ header {
 }
 
 .header__link {
+  position: relative;
   display: none;
   color: var(--white);
   text-decoration: none;
   list-style: none;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.header__link--black:hover {
+  color: var(--white);
+}
+
+.header__link:hover {
+  color: var(--white);
+}
+
+.header__link:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -7.5px;
+  border: solid var(--white);
+  border-width: 0 0 3px 0;
+  height: 5px;
+  width: 30px;
+}
+
+.header__link--search:hover .icon {
+  filter: invert();
+  cursor: pointer;
 }
 
 .header__link--black {
@@ -58,6 +84,10 @@ header {
   border: none;
   width: auto;
   cursor: pointer;
+}
+
+.header__hamburger:hover img {
+  filter: invert();
 }
 
 .header__bottom {
