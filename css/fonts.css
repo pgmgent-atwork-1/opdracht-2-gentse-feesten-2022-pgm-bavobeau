@@ -49,6 +49,10 @@ h1 {
   font-size: 2.2rem;
 }
 
+.medium {
+  font-weight: 500;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -60,5 +64,17 @@ h1 {
 @media (min-width: 700px) {
   h1 {
     font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+  .text {
+    font-size: 1.3rem;
+  }
+  .text--l {
+    font-size: 1.8rem;
   }
 }

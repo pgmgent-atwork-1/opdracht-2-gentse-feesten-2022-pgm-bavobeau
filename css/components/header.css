@@ -10,7 +10,7 @@ header {
   align-items: flex-start;
   justify-content: space-between;
   height: 560px;
-  padding-top: 3rem;
+  padding-top: 50px;
 }
 
 .logo-container {
@@ -31,17 +31,33 @@ header {
 
 .header__links {
   padding-right: 32px;
+  display: flex;
+  gap: 45px;
+  margin-bottom: 30px;
 }
 
-.header__links .header__link {
+.header__links--right {
+  margin-bottom: 0;
+}
+
+.header__link {
   display: none;
   color: var(--white);
   text-decoration: none;
   list-style: none;
+  text-transform: uppercase;
+}
+
+.header__link--black {
+  color: var(--black);
 }
 
 .header__hamburger {
   padding-right: 16px;
+  background-color: transparent;
+  border: none;
+  width: auto;
+  cursor: pointer;
 }
 
 .header__bottom {
@@ -50,23 +66,28 @@ header {
 }
 
 .title__container {
-  background: linear-gradient(90deg, hsla(0, 0%, 0%, 0) 50%, var(--red) 0%);
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 16px;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  margin-right: -16px;
+  padding: 40px 0;
+}
+
+.title__container::after {
+  position: absolute;
+  content: '';
+  background-color: var(--red);
+  height: 130px;
+  width: 200px;
 }
 
 .title {
-  position: relative;
+  z-index: 1;
   text-align: right;
   line-height: 1.1;
   background-color: var(--black);
   color: var(--white);
   padding: 10px;
+  margin-right: 16px;
 }
 
 .header__cta {
@@ -77,9 +98,10 @@ header {
   margin-left: 80px;
   padding: 20px;
   text-align: left;
+  cursor: pointer;
 }
 
-.header__cta:hover .arrow{
+.header__cta:hover .arrow {
   width: 125px;
 }
 
@@ -93,7 +115,7 @@ header {
   header {
     background: url(../../img/hero-tablet.jpg) top left no-repeat;
     background-size: contain;
-    height: 50rem;
+    height: 800px;
     position: relative;
   }
   .header {
@@ -118,14 +140,60 @@ header {
     width: 500px;
   }
   .title__container {
-    position: relative;
     margin-left: auto;
     margin-right: 0;
-    background-color: var(--red);
+    margin-top: -10px;
+  }
+  .title__container::after {
     width: 300px;
   }
   .title {
     white-space: nowrap;
+  }
+  .header__cta {
+    margin-left: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    background: url(../../img/hero-desktop.jpg) top left no-repeat;
+    background-size: contain;
+    height: 1175px;
+    position: relative;
+  }
+  .header {
+    padding-top: 30px;
+  }
+  .logo-container {
+    width: 11rem;
+    margin-right: 50px;
+  }
+  .header__links .header__link {
+    display: block;
+  }
+  .header__nav--right {
+    background-color: var(--red);
+    width: 500px;
+    padding: 70px 16px 48px 16px;
+    margin-top: -3rem;
+  }
+  .header__bottom {
+    width: 800px;
+  }
+  .title__container {
+    margin-bottom: 10px;
+  }
+  .title__container::after {
+    width: 500px;
+    height: 200px;
+  }
+  .title {
+    margin-right: 30px;
+  }
+  .header__cta {
+    padding: 30px 0;
+    margin-left: 350px;
   }
 }
 
@@ -205,7 +273,7 @@ header {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .days {
     width: 470px;
     margin-right: 130px;
