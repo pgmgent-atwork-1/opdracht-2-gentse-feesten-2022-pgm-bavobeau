@@ -37,6 +37,7 @@
 html {
   font-family: 'Stolzl', Arial, Helvetica, sans-serif;
   font-size: 100%;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5 {
@@ -46,6 +47,14 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 2.2rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text--l {
+  font-size: 1.3rem;
 }
 
 @media (min-width: 700px) {
