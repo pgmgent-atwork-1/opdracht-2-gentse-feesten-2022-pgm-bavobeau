@@ -1,0 +1,39 @@
+.events {
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.events__buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-right: 16px;
+  margin-bottom: 10px;
+}
+
+.events__button--left {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.events__buttons button {
+  background-color: transparent;
+  border: none;
+  width: 125px;
+}
+
+.events__list {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  list-style: none;
+  width: 2544px;
+  padding: 0;
+  gap: 10px;
+  transform: translateX(-12.5%);
+}
+
+.event {
+  flex: 0 0 auto;
+  width: 12.5%;
+}

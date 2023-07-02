@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/components/header.css">
+    <link rel="stylesheet" href="./css/components/events.css">
     <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
     <link rel="icon" type="image/png" href="./img/favicon.png">
     <title>Home | Gentse Feesten 2022</title>
@@ -40,7 +41,7 @@
           <div class="arrow__shaft"></div>
         </div>
         <div class="cta__text">
-          <span class="text--l bold">Vandaag</span>
+          <span class="text--l"><strong>Vandaag</strong></span>
           <span class="text medium">te beleven</span>
         </div>
       </a>
@@ -100,12 +101,20 @@
     </section>
   </header>
   <main class="layout-container">
-    <section class="events">
+    <section class="events padding-container">
       <div class="events__buttons">
-        <button class="arrow arrow--left"></button>
-        <button class="arrow"></button>
+        <button class="events__button events__button--left">
+          <div class="arrow arrow--left">
+            <div class="arrow__shaft"></div>
+          </div>
+        </button>
+        <button class="events__button">
+          <div class="arrow">
+            <div class="arrow__shaft"></div>
+          </div>
+        </button>
       </div>
-      <ul class="events__list">
+      <ul id="events" class="events__list">
       </ul>
     </section>
     <section class="news">
@@ -116,4 +125,6 @@
 
   </footer>
 </body>
+<script src="./js/script.js"></script>
+<script src="./js/home.js"></script>
 </html>
