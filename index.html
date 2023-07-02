@@ -103,14 +103,14 @@
   <main class="layout-container">
     <section class="events padding-container">
       <div class="events__buttons">
-        <button class="events__button events__button--left">
+        <button class="events__button events__button--left" onclick="eventsLeft()">
           <div class="arrow arrow--left">
-            <div class="arrow__shaft"></div>
+            <div id="arrow__left" class="arrow__shaft arrow__shaft--disabled"></div>
           </div>
         </button>
-        <button class="events__button">
+        <button class="events__button" onclick="eventsRight()">
           <div class="arrow">
-            <div class="arrow__shaft"></div>
+            <div id="arrow__right" class="arrow__shaft"></div>
           </div>
         </button>
       </div>

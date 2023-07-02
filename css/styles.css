@@ -64,6 +64,10 @@ a:hover .arrow ,button:hover .arrow {
   width: 22px;
 }
 
+.arrow__shaft--disabled, .arrow__shaft--disabled::after {
+  border-color: grey;
+}
+
 .arrow--left {
   transform: rotate(180deg);
 }

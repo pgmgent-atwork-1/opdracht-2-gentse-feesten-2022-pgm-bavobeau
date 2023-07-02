@@ -29,7 +29,7 @@ const renderEvents = (event) => {
 				<div class="event__info">
 					<h3 class="event__title">${event_element.title}</h3>
 					<div class="red__field">${event_element.location}</div>
-					<p>${event_element.start}</p>
+					<p>${event_element.start} u.</p>
 				</div>
 			</a>
 		</li>`
@@ -65,6 +65,32 @@ const renderEvents = (event) => {
 
 // 	news.innerHTML = html;
 // };
+
+// button event go left
+let eventsPlace = 1;
+const arrowLeft = document.getElementById("arrow__left");
+const arrowRight = document.getElementById("arrow__right");
+
+function eventsLeft() {
+	if (eventsPlace >= 2) {
+		eventsPlace -= 1;
+		let moved = eventsPlace * 12.5 - 12.5;
+		events.style.transform = `translateX(-${moved}%)`;
+		arrowRight.classList.remove("arrow__shaft--disabled");
+	}
+	if (eventsPlace === 1) arrowLeft.classList.add("arrow__shaft--disabled");
+}
+
+//button event go right
+function eventsRight() {
+	if (eventsPlace <= 7) {
+		eventsPlace += 1;
+		let moved = eventsPlace * 12.5 - 12.5;
+		events.style.transform = `translateX(-${moved}%)`;
+		arrowLeft.classList.remove("arrow__shaft--disabled");
+	}
+	if (eventsPlace === 8) arrowRight.classList.add("arrow__shaft--disabled");
+}
 
 fetchDataEvents();
 // fetchDataNews();
