@@ -104,6 +104,7 @@
 @media (min-width: 700px) {
   .events__list {
     width: 330vw;
+    align-items: center;
   }
 }
 
