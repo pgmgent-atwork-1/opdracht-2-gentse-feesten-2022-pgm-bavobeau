@@ -31,7 +31,7 @@
   list-style: none;
   width: 550vw;
   padding: 0;
-  gap: 10px;
+  gap: 16px;
   transition: all 0.5s ease;
 }
 
@@ -45,19 +45,18 @@
   color: white;
 }
 
-.event__image__holder {
+.event__image {
   position: relative;
-  background-size: cover;
-  aspect-ratio: 1.7 / 1;
   border: 1px solid white;
 }
 
-.event__image {
-   
+.event__image img {
+  aspect-ratio: 1.4 / 1;
+  object-fit: cover;
 }
 
-.event:nth-child(even) .event__image {
-  aspect-ratio: 1.4 / 1;
+.event:nth-child(odd) .event__image img {
+  aspect-ratio: 1.7 / 1;
 }
 
 .black__field {
