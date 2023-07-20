@@ -1,5 +1,5 @@
 const events = document.getElementById("events");
-//const news = document.querySelector(".news_items");
+const news = document.getElementById("news");
 
 //fetching data for events
 const fetchDataEvents = async () => {
@@ -38,33 +38,38 @@ const renderEvents = (event) => {
 	events.innerHTML = html;
 };
 
-// // fetch data for news
-// const fetchDataNews = async () => {
-// 	const news = await fetch(
-// 		"https://www.pgm.gent/data/gentsefeesten/news.json"
-// 	);
+// fetch data for news
+const fetchDataNews = async () => {
+	const news = await fetch(
+		"https://www.pgm.gent/data/gentsefeesten/news.json"
+	);
 
-// 	if (news.status === 200) {
-// 		const data = await news.json();
-// 		renderNews(data);
-// 	} else {
-// 		throw new Error("er is iets misgegaan bij het ophalen van de data");
-// 	}
-// };
+	if (news.status === 200) {
+		const data = await news.json();
+		renderNews(data);
+	} else {
+		throw new Error("er is iets misgegaan bij het ophalen van de data");
+	}
+};
 
-// const renderNews = (data) => {
-//     const html = data.slice(0, 3).map((news_element) => {
-//         return`
-// 		  <li class="news_article">
-//         <a href="news.html" class="news_link">
-//             <h3>${news_element.title}</h3>
-//             <div class="arrow"></div>
-//         </a>
-// 		  </li>`
-//     }).join("");
+const renderNews = (data) => {
+    const html = data.slice(0, 3).map((news_element) => {
+        return`
+		  <li class="news__article">
+        <a href="news.html" class="news__link">
+            <h3>${news_element.title}</h3>
+						<div class="arrow">
+						<div class="arrow__shaft"></div>
+					</div>
+        </a>
+		  </li>`
+    }).join("");
 
-// 	news.innerHTML = html;
-// };
+		news.innerHTML = html;
+		news.innerHTML += `<li class="news__article news__article--last">
+		<img src="./img/bg-twitterfeed.jpg" alt="news foto">
+		</li>`;
+};
 
 // button event go left
 let eventsPlace = 1;
@@ -93,4 +98,4 @@ function eventsRight() {
 }
 
 fetchDataEvents();
-// fetchDataNews();
+fetchDataNews();
