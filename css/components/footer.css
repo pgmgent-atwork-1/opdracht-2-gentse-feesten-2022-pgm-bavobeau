@@ -1,0 +1,21 @@
+.footer__top {
+  background : url('../../img/visual-eyecatchers.png') no-repeat;
+  margin-top: 40px;
+}
+
+.cta__buttons {
+  margin-bottom: 200px;
+}
+
+.cta__button {
+  background-color: var(--red);
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  align-items: center;
+  gap: 30px;
+  padding: 15px 30px;
+  margin-bottom: 30px;
+  color: var(--black);
+  text-decoration: none;
+}

@@ -72,6 +72,10 @@ a:hover .arrow ,button:hover .arrow {
   transform: rotate(180deg);
 }
 
+.arrow--black .arrow__shaft, .arrow--black .arrow__shaft::after {
+  border-color: var(--black);
+}
+
 @media (min-width: 700px) {
   .icon--wh-bl {
     filter: none;
