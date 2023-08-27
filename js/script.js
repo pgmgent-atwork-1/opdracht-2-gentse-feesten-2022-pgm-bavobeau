@@ -1,6 +1,4 @@
-const menu = document.querySelector(".hamburger_nav");
-const hamburger = document.querySelector(".header__hamburger");
-const close = document.querySelector(".close_hamburger");
+const menu = document.querySelector(".hamburger__nav");
 
 function toggleMenu() {
   if (menu.classList.contains("showMenu")) {
@@ -9,6 +7,3 @@ function toggleMenu() {
     menu.classList.add("showMenu");
   }
 }
-
-hamburger.addEventListener("click", toggleMenu);
-close.addEventListener("click", toggleMenu);

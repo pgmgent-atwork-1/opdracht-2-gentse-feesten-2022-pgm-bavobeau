@@ -13,7 +13,7 @@ header {
   padding-top: 50px;
 }
 
-.logo-container {
+.logo-container img {
   display: block;
   width: 10rem;
 }
@@ -43,11 +43,14 @@ header {
 .header__link {
   position: relative;
   display: none;
-  color: var(--white);
-  text-decoration: none;
   list-style: none;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.header__link a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 .header__link--search {
@@ -78,11 +81,11 @@ header {
   cursor: pointer;
 }
 
-.header__link--black {
+.header__link--black a {
   color: var(--black);
 }
 
-.header__hamburger {
+.hamburger {
   padding-right: 16px;
   background-color: transparent;
   border: none;
@@ -90,7 +93,7 @@ header {
   cursor: pointer;
 }
 
-.header__hamburger:hover img {
+.hamburger:hover img {
   filter: invert();
 }
 

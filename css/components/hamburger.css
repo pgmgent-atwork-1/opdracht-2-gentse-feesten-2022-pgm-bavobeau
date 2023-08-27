@@ -1,0 +1,138 @@
+.hamburger__nav {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  background-color: var(--red);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.showMenu {
+  display: flex;
+  overflow: auto;
+}
+
+body:has(.showMenu) {
+  overflow: hidden;
+}
+
+.logo-container--invert {
+  margin-bottom: 100px;
+  width: 150px;
+}
+
+.logo-container--invert a {
+  width: 100%;
+}
+
+.logo-container--invert img {
+  filter: invert(100%);
+  width: 100%;
+}
+
+.hamburger--close {
+  position: absolute;
+  top: 48px;
+  right: 16px;
+}
+
+.hamburger__items {
+  list-style: none;
+  padding: 0;
+}
+
+.hamburger__item {
+  margin-bottom: 36px;
+}
+
+.hamburger__item a {
+  color: var(--black);
+  font-size: 1.1rem;
+  line-height: 1.1;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.hamburger__item--img > a {
+  position: relative;
+}
+
+.hamburger__item--img > a::after {
+  content: url("../../img/gentse-feesten-icoontjes/arrow-down.svg");
+  transform: scale(0.8);
+  display: block;
+  position: absolute;
+  height: 22px;
+  right: -30px;
+  top: -5px;
+}
+
+.hamburger__items--second {
+  padding-left: 25px;
+  margin-top: 36px;
+}
+
+.hamburger__item--main > a {
+  text-transform: uppercase;
+}
+
+.hamburger__item--search {
+  margin-top: 75px;
+}
+
+@media (min-width: 700px) {
+  .hamburger--close {
+    margin-right: 56px;
+    margin-top: 16px;
+  }
+  .hamburger__item--search {
+    position: absolute;
+    top: 0;
+    right: 180px;
+  }
+  .hamburger__items--second {
+    position: absolute;
+    top: 260px;
+    left: 270px;
+  }
+  .hamburger__item--img > a::after {
+    content: url("../../img/gentse-feesten-icoontjes/arrow-right-long.svg");
+    right: -120px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .hamburger__nav::after {
+    background: var(--black) url("../../img/hero-mobile.jpg") center right no-repeat;
+    background-size: contain;
+    position: fixed;
+    top: 0;
+    right: 0;
+    content: "";
+    width: 50vw;
+    height: 100vh;
+    z-index: -100;
+  }
+  .hamburger__nav {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .hamburger--close img, .hamburger__item--search img {
+    filter: invert(100%);
+  }
+  .hamburger--close {
+    top: 30px;
+  }
+  .hamburger__item--search {
+    top: -20px;
+  }
+  .hamburger__items--second {
+    top: 240px;
+  }
+}

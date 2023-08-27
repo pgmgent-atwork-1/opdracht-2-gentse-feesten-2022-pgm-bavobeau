@@ -27,27 +27,24 @@
               alt="Logo van de Gentse Feesten 2022"
           /></a>
           <ul class="header__links">
-            <li class="header__link text--w-medium" href="news.html">
-              <a>Nieuws</a>
+            <li class="header__link text--w-medium">
+              <a href="news.html">Nieuws</a>
             </li>
-            <li class="header__link text--w-medium" href="day.html">
-              <a>Programma</a>
+            <li class="header__link text--w-medium">
+              <a href="day.html">Programma</a>
             </li>
-            <li class="header__link text--w-medium" href="#">
-              <a>Praktisch</a>
+            <li class="header__link text--w-medium">
+              <a href="#">Praktisch</a>
             </li>
           </ul>
         </nav>
         <nav class="header__nav header__nav--right">
           <ul class="header__links header__links--right">
-            <li
-              class="header__link header__link--black text--w-medium"
-              href="#"
-            >
-              <a>Hoe naar GF22?</a>
+            <li class="header__link header__link--black text--w-medium">
+              <a href="#">Hoe naar GF22?</a>
             </li>
-            <li class="header__link--search" href="search.html">
-              <a
+            <li class="header__link--search">
+              <a href="./search.html"
                 ><img
                   class="icon icon--wh-bl icon--s"
                   src="./img/gentse-feesten-icoontjes/search.svg"
@@ -55,7 +52,7 @@
               /></a>
             </li>
           </ul>
-          <button class="header__hamburger icon icon--wh-bl icon--l">
+          <button class="hamburger icon--wh-bl" onclick="toggleMenu()">
             <img src="../img/gentse-feesten-icoontjes/hamburger.svg" />
           </button>
         </nav>
@@ -272,7 +269,7 @@
         </div>
       </section>
     </footer>
-    <nav class="hamburger__nav">
+    <nav class="hamburger__nav padding-container">
       <div class="logo-container logo-container--invert">
         <a href="index.html">
           <img
@@ -282,41 +279,47 @@
           />
         </a>
       </div>
-      <button class="close_hamburger">
+      <button class="hamburger hamburger--close" onclick="toggleMenu()">
         <img src="./img/gentse-feesten-icoontjes/cross.svg" alt="close menu" />
       </button>
-      <ul class="hamburger_items">
-        <li class="hamburger_item"><a href="./news.html">Nieuws</a></li>
-        <li class="hamburger_item">
-          <a href="#">Programma</a>
-          <div class="arrow black"></div>
+      <ul class="hamburger__items">
+        <li class="hamburger__item hamburger__item--main">
+          <a href="./news.html">Nieuws</a>
         </li>
-        <li class="hamburger_item jump">
-          <ul class="hamburger_items">
-            <li class="hamburger_item">
+        <li class="hamburger__item hamburger__item--main hamburger__item--img">
+          <a href="#">Programma</a>
+          <ul class="hamburger__items hamburger__items--second">
+            <li class="hamburger__item">
               <a href="./events/day.html?day=15">Vrijdag 15 juli</a>
             </li>
-            <li class="hamburger_item">
+            <li class="hamburger__item">
               <a href="./events/day.html?day=16">Zaterdag 16 juli</a>
             </li>
-            <li class="hamburger_item">
+            <li class="hamburger__item">
               <a href="./events/day.html?day=17">Zondag 17 juli</a>
             </li>
-            <li class="hamburger_item"><a href="#">Maandag 18 juli</a></li>
-            <li class="hamburger_item"><a href="#">Dinsdag 19 juli</a></li>
-            <li class="hamburger_item"><a href="#">Woensdag 20 juli</a></li>
-            <li class="hamburger_item"><a href="#">Donderdag 21 juli</a></li>
-            <li class="hamburger_item"><a href="#">Vrijdag 22 juli</a></li>
-            <li class="hamburger_item"><a href="#">Zaterdag 23 juli</a></li>
-            <li class="hamburger_item"><a href="#">Zondag 24 juli</a></li>
-            <li class="hamburger_item"><a href="#">Programma</a></li>
+            <li class="hamburger__item"><a href="#">Maandag 18 juli</a></li>
+            <li class="hamburger__item"><a href="#">Dinsdag 19 juli</a></li>
+            <li class="hamburger__item"><a href="#">Woensdag 20 juli</a></li>
+            <li class="hamburger__item"><a href="#">Donderdag 21 juli</a></li>
+            <li class="hamburger__item"><a href="#">Vrijdag 22 juli</a></li>
+            <li class="hamburger__item"><a href="#">Zaterdag 23 juli</a></li>
+            <li class="hamburger__item"><a href="#">Zondag 24 juli</a></li>
+            <li class="hamburger__item"><a href="#">Programma</a></li>
           </ul>
         </li>
-        <li class="hamburger_item"><a href="#">Praktisch</a></li>
-        <li class="hamburger_item"><a href="#">Hoe naar GF22?</a></li>
-        <li class="hamburger_item search_item">
-          <a href="./search.html"
-            ><img src="./img/gentse-feesten-icoontjes/search.svg" alt="search"
+        <li class="hamburger__item hamburger__item--main">
+          <a href="#">Praktisch</a>
+        </li>
+        <li class="hamburger__item hamburger__item--main">
+          <a href="#">Hoe naar GF22?</a>
+        </li>
+        <li class="hamburger__item hamburger__item--search">
+          <a href="search.html"
+            ><img
+              class="icon icon--s"
+              src="./img/gentse-feesten-icoontjes/search.svg"
+              alt="Zoek door Gentse Feesten 2022"
           /></a>
         </li>
       </ul>
