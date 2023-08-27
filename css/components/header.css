@@ -50,6 +50,10 @@ header {
   cursor: pointer;
 }
 
+.header__link--search {
+  display: none;
+}
+
 .header__link--black:hover {
   color: var(--white);
 }
@@ -118,6 +122,7 @@ header {
   color: var(--white);
   padding: 10px;
   margin-right: 16px;
+  white-space: nowrap;
 }
 
 .header__cta {
@@ -157,7 +162,7 @@ header {
     margin-top: -3rem;
   }
   .header__links .header__link--search {
-    display: block;
+    display: flex;
   }
   .header__bottom {
     position: absolute;
@@ -167,7 +172,6 @@ header {
     width: 500px;
   }
   .title__container {
-    margin-left: auto;
     margin-right: 0;
     margin-top: -10px;
   }
@@ -196,8 +200,8 @@ header {
     width: 11rem;
     margin-right: 50px;
   }
-  .header__links .header__link {
-    display: block;
+  .header__link {
+    display: flex;
   }
   .header__nav--right {
     background-color: var(--red);
