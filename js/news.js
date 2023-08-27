@@ -1,4 +1,4 @@
-const news = document.querySelector(".news_list");
+const news = document.querySelector(".news__cards");
 
 // fetch data for news
 const fetchDataNews = async () => {
@@ -18,11 +18,13 @@ const fetchDataNews = async () => {
 const renderNews = (data) => {
     const html = data.map((news_element) => {
         return `
-        <li class="news_article">
+        <li class="news__card">
             <a href="news.html" class="news_link">
-                <div class="news_title">
+                <div class="news__title">
                     <h3>${news_element.title}</h3>
-                    <div class="arrow"></div>
+                    <div class="arrow">
+                        <div id="arrow__right" class="arrow__shaft"></div>
+                    </div>
                 </div>
                 <img src="https://www.pgm.gent/data/gentsefeesten/${news_element.picture.large}" class="news_image">
             </a>

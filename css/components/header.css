@@ -3,14 +3,17 @@ header {
 }
 
 .header {
-  background: url(../../img/hero-mobile.jpg) top center no-repeat;
-  background-size: contain;
   position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  height: 560px;
   padding-top: 50px;
+}
+
+.header--home .header {
+  background: url(../../img/hero-mobile.jpg) top center no-repeat;
+  background-size: contain;
+  height: 560px;
 }
 
 .logo-container img {
@@ -57,7 +60,7 @@ header {
   display: none;
 }
 
-.header__link--black:hover {
+.header__link--black:hover a {
   color: var(--white);
 }
 
@@ -71,8 +74,19 @@ header {
   left: 0;
   bottom: -7.5px;
   border: solid var(--white);
-  border-width: 0 0 3px 0;
+  border-width: 3px 0 0 0;
   height: 5px;
+  width: 30px;
+}
+
+.header__link--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -17.5px;
+  border: solid var(--white);
+  border-width: 3px 0 0 3px;
+  height: 15px;
   width: 30px;
 }
 
@@ -93,6 +107,14 @@ header {
   cursor: pointer;
 }
 
+.header--home .hamburger img {
+  filter: none;
+}
+
+.hamburger img {
+  filter: invert();
+}
+
 .hamburger:hover img {
   filter: invert();
 }
@@ -107,14 +129,15 @@ header {
   justify-content: flex-end;
   align-items: center;
   padding: 40px 0;
+  position: relative;
 }
 
 .title__container::after {
   position: absolute;
   content: '';
   background-color: var(--red);
-  height: 130px;
-  width: 200px;
+  height: 100%;
+  width: 178.50px;
 }
 
 .title {
@@ -125,6 +148,9 @@ header {
   color: var(--white);
   padding: 10px;
   margin-right: 16px;
+}
+
+.header--home h1 {
   white-space: nowrap;
 }
 
@@ -146,14 +172,21 @@ header {
   padding-left: 10px;
 }
 
+.header--red .header__nav--right {
+  background-color: var(--red);
+  width: 190px;
+  padding: 64px 16px 48px 16px;
+  margin-top: -3rem;
+}
+
 @media (min-width: 700px) {
-  header {
+  .header--home {
     background: url(../../img/hero-tablet.jpg) top left no-repeat;
     background-size: contain;
     height: 800px;
     position: relative;
   }
-  .header {
+  .header--home .header {
     position: relative;
     height: fit-content;
     background: none;
@@ -163,15 +196,20 @@ header {
     width: 300px;
     padding: 64px 16px 48px 16px;
     margin-top: -3rem;
+  }  
+  .header--red .header__nav--right {
+    background-color: var(--red);
+    width: 300px;
+    padding: 64px 16px 48px 16px;
+    margin-top: -3rem;
   }
   .header__links .header__link--search {
     display: flex;
   }
   .header__bottom {
-    position: absolute;
     display: flex;
     flex-direction: column;
-    right: 0;
+    float: right;
     width: 500px;
   }
   .title__container {
@@ -187,10 +225,13 @@ header {
   .header__cta {
     margin-left: 50px;
   }
+  .hamburger img {
+    filter: none;
+  }
 }
 
 @media (min-width: 1200px) {
-  header {
+  .header--home {
     background: url(../../img/hero-desktop.jpg) top left no-repeat;
     background-size: contain;
     height: 1175px;
@@ -207,6 +248,12 @@ header {
     display: flex;
   }
   .header__nav--right {
+    background-color: var(--red);
+    width: 500px;
+    padding: 70px 16px 48px 16px;
+    margin-top: -3rem;
+  }
+  .header--red .header__nav--right {
     background-color: var(--red);
     width: 500px;
     padding: 70px 16px 48px 16px;

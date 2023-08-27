@@ -55,6 +55,11 @@
   border: none;
   font-weight: 500;
   font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.newsletter__input button:hover {
+  background-color: var(--white);
 }
 
 .footer__bottom {
@@ -155,6 +160,10 @@
   gap: 2px;
   margin-right: 10px;
   margin-bottom: 20px;
+}
+
+.footer__privacy a:hover {
+  text-decoration: underline;
 }
 
 .footer__privacy img {

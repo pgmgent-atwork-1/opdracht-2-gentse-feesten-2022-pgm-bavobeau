@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="./css/components/header.css" />
     <link rel="stylesheet" href="./css/components/hamburger.css" />
     <link rel="stylesheet" href="./css/components/events.css" />
-    <link rel="stylesheet" href="./css/components/news.css" />
+    <link rel="stylesheet" href="./css/components/news-home.css" />
     <link rel="stylesheet" href="./css/components/footer.css" />
     <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
     <link rel="icon" type="image/png" href="./img/favicon.png" />
     <title>Home | Gentse Feesten 2022</title>
   </head>
   <body>
-    <header class="layout-container">
+    <header class="layout-container header--home">
       <div class="header padding-container">
         <nav class="header__nav">
           <a class="logo-container" href="index.html" target="_self"
@@ -28,10 +28,10 @@
           /></a>
           <ul class="header__links">
             <li class="header__link text--w-medium">
-              <a href="news.html">Nieuws</a>
+              <a href="./news.html">Nieuws</a>
             </li>
             <li class="header__link text--w-medium">
-              <a href="day.html">Programma</a>
+              <a href="./events/day.html?day=15">Programma</a>
             </li>
             <li class="header__link text--w-medium">
               <a href="#">Praktisch</a>
@@ -72,61 +72,61 @@
         </a>
         <ul class="days">
           <li class="day">
-            <a class="day__items" href="/day.html?day=15">
+            <a class="day__items" href="./events/day.html?day=15">
               <h2 class="day__title">Vr</h2>
               <p class="day__date">15 juli</p>
             </a>
           </li>
           <li class="day">
-            <a class="day__items" href="/day.html?day=15">
+            <a class="day__items" href="./events/day.html?day=16">
               <h2 class="day__title">Za</h2>
               <p class="day__date">16 juli</p>
             </a>
           </li>
           <li class="day">
-            <a class="day__items" href="/day.html?day=15">
+            <a class="day__items" href="./events/day.html?day=17">
               <h2 class="day__title">Zo</h2>
               <p class="day__date">17 juli</p>
             </a>
           </li>
           <li class="day">
-            <a class="day__items" href="/day.html?day=15">
+            <a class="day__items" href="./events/day.html?day=18">
               <h2 class="day__title">Ma</h2>
               <p class="day__date">18 juli</p>
             </a>
           </li>
           <li class="day">
-            <a class="day__items" href="/day.html?day=15">
+            <a class="day__items" href="./events/day.html?day=19">
               <h2 class="day__title">Di</h2>
               <p class="day__date">19 juli</p>
             </a>
           </li>
           <li class="day">
-            <a class="day__items" href="/day.html?day=15">
+            <a class="day__items" href="./events/day.html?day=20">
               <h2 class="day__title">Wo</h2>
               <p class="day__date">20 juli</p>
             </a>
           </li>
           <li class="day">
-            <a class="day__items" href="/day.html?day=15">
+            <a class="day__items" href="./events/day.html?day=21">
               <h2 class="day__title">Do</h2>
               <p class="day__date">21 juli</p>
             </a>
           </li>
           <li class="day">
-            <a class="day__items" href="/day.html?day=15">
+            <a class="day__items" href="./events/day.html?day=22">
               <h2 class="day__title">Vr</h2>
               <p class="day__date">22 juli</p>
             </a>
           </li>
           <li class="day">
-            <a class="day__items" href="/day.html?day=15">
+            <a class="day__items" href="./events/day.html?day=23">
               <h2 class="day__title">Za</h2>
               <p class="day__date">23 juli</p>
             </a>
           </li>
           <li class="day">
-            <a class="day__items" href="/day.html?day=15">
+            <a class="day__items" href="./events/day.html?day=24">
               <h2 class="day__title">Zo</h2>
               <p class="day__date">24 juli</p>
             </a>
@@ -287,7 +287,7 @@
           <a href="./news.html">Nieuws</a>
         </li>
         <li class="hamburger__item hamburger__item--main hamburger__item--img">
-          <a href="#">Programma</a>
+          <a href="./events/day.html?day=15">Programma</a>
           <ul class="hamburger__items hamburger__items--second">
             <li class="hamburger__item">
               <a href="./events/day.html?day=15">Vrijdag 15 juli</a>
@@ -298,14 +298,30 @@
             <li class="hamburger__item">
               <a href="./events/day.html?day=17">Zondag 17 juli</a>
             </li>
-            <li class="hamburger__item"><a href="#">Maandag 18 juli</a></li>
-            <li class="hamburger__item"><a href="#">Dinsdag 19 juli</a></li>
-            <li class="hamburger__item"><a href="#">Woensdag 20 juli</a></li>
-            <li class="hamburger__item"><a href="#">Donderdag 21 juli</a></li>
-            <li class="hamburger__item"><a href="#">Vrijdag 22 juli</a></li>
-            <li class="hamburger__item"><a href="#">Zaterdag 23 juli</a></li>
-            <li class="hamburger__item"><a href="#">Zondag 24 juli</a></li>
-            <li class="hamburger__item"><a href="#">Programma</a></li>
+            <li class="hamburger__item">
+              <a href="./events/day.html?day=18">Maandag 18 juli</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="./events/day.html?day=19">Dinsdag 19 juli</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="./events/day.html?day=20">Woensdag 20 juli</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="./events/day.html?day=21">Donderdag 21 juli</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="./events/day.html?day=22">Vrijdag 22 juli</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="./events/day.html?day=23">Zaterdag 23 juli</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="./events/day.html?day=24">Zondag 24 juli</a>
+            </li>
+            <li class="hamburger__item">
+              <a href="./events/day.html?day=15">Programma</a>
+            </li>
           </ul>
         </li>
         <li class="hamburger__item hamburger__item--main">

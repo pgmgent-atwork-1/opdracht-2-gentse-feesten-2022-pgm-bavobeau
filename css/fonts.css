@@ -53,6 +53,10 @@ h2 {
   font-size: 1.5rem;
 }
 
+h3 {
+  font-size: 1.4rem;
+}
+
 p {
   font-size: 1.1rem;
   line-height: 1.5;
@@ -94,6 +98,9 @@ p {
   h2 {
     font-size: 2.2rem;
   }
+  h3 {
+    font-size: 1.8rem;
+  }
   p {
     font-size: 1.2rem;
   }
@@ -105,6 +112,9 @@ p {
   }
   h2 {
     font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.9rem;
   }
   p {
     font-size: 1.5rem;
