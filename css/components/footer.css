@@ -1,10 +1,10 @@
 .footer__top {
-  background : url('../../img/visual-eyecatchers.png') no-repeat;
+  background : url('../../img/visual-eyecatchers.png') no-repeat right top;
   margin-top: 40px;
 }
 
 .cta__buttons {
-  margin-bottom: 200px;
+  margin-bottom: 300px;
 }
 
 .cta__button {
@@ -18,4 +18,49 @@
   margin-bottom: 30px;
   color: var(--black);
   text-decoration: none;
+}
+
+.newsletter {
+  background : url('../../img/bg-footer.jpg') no-repeat bottom right;
+  background-size: 120%;
+  padding-top: 16px;
+  padding-bottom: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter__input {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.newsletter__input input {
+  background-color: transparent;
+  color: var(--white);
+  border: none;
+  border-bottom: 2px solid var(--white);
+  font-size: 1.1rem;
+  height: 50px;
+  padding: 0 15px;
+}
+
+.newsletter__input button {
+  background-color: var(--red);
+  padding: 15px 30px;
+  max-width: fit-content;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.footer__bottom {
+  background-color: var(--red);
+}
+
+.footer__bottom__bottom {
+  background-color: var(--black);
 }

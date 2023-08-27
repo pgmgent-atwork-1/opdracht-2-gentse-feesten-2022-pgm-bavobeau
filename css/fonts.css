@@ -46,10 +46,19 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.75rem;
 }
 
-.medium {
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.text--w-medium {
   font-weight: 500;
 }
 
@@ -57,15 +66,38 @@ h1 {
   font-size: 1.3rem;
 }
 
+.text--s {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.text--xs {
+  font-size: 0.85rem;
+}
+
+.text--c-white {
+  color: var(--white);
+}
+
+.text--c-grey {
+  color: var(--grey);
+}
+
 @media (min-width: 700px) {
   h1 {
-    font-size: 2.4rem;
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.75rem;
   }
 }
 
 @media (min-width: 1200px) {
   h1 {
     font-size: 4.5rem;
+  }
+  h2 {
+    font-size: 2.5rem;
   }
   .text {
     font-size: 1.3rem;
