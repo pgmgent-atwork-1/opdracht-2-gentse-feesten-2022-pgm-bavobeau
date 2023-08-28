@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/components/header.css" />
     <link rel="stylesheet" href="./css/components/hamburger.css" />
+    <link rel="stylesheet" href="./css/components/day.css" />
     <link rel="stylesheet" href="./css/components/news.css" />
+    <link rel="stylesheet" href="./css/components/search.css" />
     <link rel="stylesheet" href="./css/components/footer.css" />
     <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
     <link rel="icon" type="image/png" href="./img/favicon.png" />
@@ -19,7 +21,7 @@
     <header class="layout-container">
       <div class="header header--red padding-container">
         <nav class="header__nav">
-          <a class="logo-container" href="index.html" target="_self"
+          <a class="logo-container" href="./index.html" target="_self"
             ><img
               class="site-logo"
               src="./img/GF-logo-inverse.svg"
@@ -27,10 +29,10 @@
           /></a>
           <ul class="header__links">
             <li class="header__link text--w-medium">
-              <a href="news.html">Nieuws</a>
+              <a href="./news.html">Nieuws</a>
             </li>
             <li class="header__link text--w-medium">
-              <a href="day.html">Programma</a>
+              <a href="./events/day.html?day=15">Programma</a>
             </li>
             <li class="header__link text--w-medium">
               <a href="#">Praktisch</a>
@@ -52,7 +54,7 @@
             </li>
           </ul>
           <button class="hamburger icon--wh-bl" onclick="toggleMenu()">
-            <img src="../img/gentse-feesten-icoontjes/hamburger.svg" />
+            <img src="./img/gentse-feesten-icoontjes/hamburger.svg" />
           </button>
         </nav>
       </div>
@@ -62,9 +64,20 @@
         </div>
       </section>
     </header>
-    <main>
-      
-
+    <main class="layout-container padding-container">
+      <div class="search">
+        <form action="./search.html">
+          <input type="text" name="search" id="search-input">
+          <button type="submit"><img src="./img/gentse-feesten-icoontjes/search.svg" alt="zoeken"></button>
+        </form>
+      </div>
+      <section class="search__grid">
+        <form class="preview preview--search">
+          <button type="button" class="button button--on" id="grid-button"></button>
+          <button type="button" class="button" id="list-button"></button>
+        </form>
+        <ul class="grid" id="list"></ul>
+      </section>
     </main>
     <footer>
       <section class="footer__top layout-container">
@@ -228,5 +241,5 @@
     </nav>
   </body>
   <script src="./js/script.js"></script>
-  <script src="./js/news.js"></script>
+  <script src="./js/search.js"></script>
 </html>

@@ -257,6 +257,18 @@
   display: none;
 }
 
+.grid--list .event__link:hover .event__info {
+  box-shadow: none;
+  transform: none;
+  background-position: 100% 100%;
+}
+
+.grid--list .event__link .event__info {
+  background: linear-gradient(var(--black), var(--black) 50%, var(--white) 50%, var(--white));
+  background-size: 100% 200%;
+  transition: background 1s;
+}
+
 @media (min-width: 700px) {
   .filter {
     margin-top: 300px ;
@@ -290,6 +302,10 @@
   .day:nth-child(4) .day__items, .day:nth-child(5) .day__items, .day:nth-child(9) .day__items, .day:nth-child(10) .day__items {
     background-color: var(--black);
     color: var(--white);
+  }
+  .day:nth-child(4):hover .day__items, .day:nth-child(5):hover .day__items, .day:nth-child(9):hover .day__items, .day:nth-child(10):hover .day__items {
+    background-color: var(--white);
+    color: var(--black);
   }
   .day:nth-child(4) {
     border: 2px solid var(--white);
@@ -376,6 +392,14 @@
     background-color: var(--black);
     color: var(--white);
   }
+  .day:nth-child(4):hover .day__items, .day:nth-child(5):hover .day__items {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  .day:nth-child(7):hover .day__items, .day:nth-child(8):hover .day__items, .day:nth-child(9):hover .day__items, .day:nth-child(10):hover .day__items {
+    background-color: var(--white);
+    color: var(--black);
+  }
   .day:nth-child(4) .day__items, .day:nth-child(5) .day__items {
     background-color: var(--red);
     color: var(--black);
@@ -388,6 +412,10 @@
     border-bottom: none;
     border-left: none;
     border-top: none;
+  }
+  .day:nth-child(4) {
+    border-right: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
   }
   .day__items--active {
     transform: scaleY(1.3);
