@@ -3,6 +3,7 @@
     const $date = document.getElementById("date");
     const $more = document.getElementById("events");
     const $location = document.getElementById("location");
+    const $map = document.getElementById('map-name');
     let params = new URLSearchParams(document.location.search);
     let day = params.get('day');
     let slug = params.get('slug');  
@@ -37,6 +38,7 @@
     // render one event
     const renderEvent = (event) => {
       const html = event.map((event) => {
+        $map.innerHTML = event.location;
         $date.innerHTML = `Overzicht ${event.day_of_week} ${event.day} juli`;
         return `
       <div class="event__main">
