@@ -23,7 +23,7 @@ const renderEvents = (event) => {
 		<li class="event">
 			<a href="#" class="event__link">
 				<div class="event__image">
-					<img src="${event_element.image ? event_element.image.full : "../img/bg-twitterfeed.jpg"}">
+					<img src="${event_element.image ? event_element.image.full : "./img/bg-twitterfeed.jpg"}">
 					<div class="black__field">${event_element.day_of_week.slice(0,2)} ${event_element.day} juli</div>
 				</div>
 				<div class="event__info">
