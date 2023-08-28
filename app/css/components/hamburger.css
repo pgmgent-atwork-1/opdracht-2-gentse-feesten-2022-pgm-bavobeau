@@ -60,6 +60,14 @@ body:has(.showMenu) {
   text-decoration: none;
 }
 
+.hamburger__item > a:hover {
+  color: var(--white);
+}
+
+.hamburger__item > a:hover::after {
+  filter: invert();
+}
+
 .hamburger__item--img > a {
   position: relative;
 }
@@ -91,6 +99,7 @@ body:has(.showMenu) {
   .hamburger--close {
     margin-right: 56px;
     margin-top: 16px;
+    filter: none;
   }
   .hamburger__item--search {
     position: absolute;

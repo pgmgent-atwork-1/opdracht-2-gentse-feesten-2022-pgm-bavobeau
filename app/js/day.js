@@ -4,6 +4,9 @@
     const title = document.getElementById("title");
     let params = new URLSearchParams(location.search);
     let day = params.get('day');
+    if (day <= '14' | day >= '25') {
+      day = '15'
+    };
     let activeDay = document.getElementById(`day${day}`);
 
     const setActiveDay = async () => {
