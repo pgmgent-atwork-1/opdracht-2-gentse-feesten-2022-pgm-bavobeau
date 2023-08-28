@@ -10,7 +10,33 @@
   display: flex;
   align-items: center;
   color: var(--white);
+  font-weight: 500;
   text-decoration: none;
   gap: 20px;
   text-transform: uppercase;
+}
+
+.red__field, .event__time {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.event__desc {
+  display: none;
+}
+
+.event__details {
+  list-style: none;
+  padding: 0;
+}
+
+.event__details li, .event__details a {
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.event__details a {
+  display: flex;
+  gap: 5px ;
 }

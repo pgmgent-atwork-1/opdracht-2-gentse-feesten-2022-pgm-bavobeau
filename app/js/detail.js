@@ -37,22 +37,34 @@
     // render one event
     const renderEvent = (event) => {
       const html = event.map((event) => {
-        $date.innerHTML += `${event.day_of_week} ${event.day} juli`;
+        $date.innerHTML = `Overzicht ${event.day_of_week} ${event.day} juli`;
         return `
       <div class="event__main">
         <h1 class="event__title text--c-white">${event.title}</h1>
         <div class="red__field">${event.location}</div>
         <div class="event__time text--c-white">${event.start} - ${event.end}</div>
       </div>
-      <p class="event__desc">${event.description}</p>
+      <p class="event__desc text--c-white">${event.description}</p>
       <img src="${checkContent(event.image.full)}">
-      <ul class="event__info">
-        <li><span>Organisator:</span>${event.organizer}</li>
-        <li><span>Website:</span><a href="${event.url}"></a>${event.url}</li>
-        <li><span>Categorieën:</span><ul>${event.category.map((element) => {return `<li>${element}</li>`})}</ul></li>
-        <li><span>Prijs:</span>${event.ticket}</li>
-        <li><span>Leeftijd:</span>${event.organisator}</li>
+      <ul class="event__details">
+        <li>Organisator:</li>
+        <li><a href="#">${event.organizer}</a></li>
+        <li>Categorieën:</li>
+        <li><a href="#">${event.category.map((element) => {return `<p>${element}</p>`})}</a></li>
       </ul>
+      <ul class="socials">
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul>
+      <div class="event__map">
+        <div class="red__area">
+          <div class="red__field red__field--black">${event.location}</div>
+          <a href="#">Open in Google Maps</a>
+          <div class="red__field red__field--transparant">${event.location}</div>
+        </div>
+        <img src="../img/maps.png">
+      </div>
       `;
       }).join("");
 
