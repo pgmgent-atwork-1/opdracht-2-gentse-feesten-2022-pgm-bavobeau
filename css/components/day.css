@@ -1,0 +1,449 @@
+.filter {
+  margin-top: 100px;
+}
+
+.days {
+  display: none;
+}
+
+.filter-title {
+  display: none
+}
+
+.filters {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.filter__checkboxes {
+  display: flex;
+  border: 1px solid var(--white);
+  padding: 20px 15px;
+}
+
+.filter__checkboxes input {
+  margin-right: 10px;
+  background-color: transparent;
+  border: 2px solid var(--white);
+}
+
+.filter__checkboxes label {
+  color: var(--white);
+  padding-right: 20px;
+}
+
+.filter__checkboxes img {
+  filter: invert();
+}
+
+.filter__categories {
+  display: flex;
+  padding: 0;
+}
+
+.filter__categories li {
+  list-style: none;
+  width: 25%;
+}
+
+.category {
+  color: var(--white);
+  text-decoration: none;
+  border: 1px solid var(--white);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.category p {
+  display: none;
+}
+
+.category img {
+  filter: invert();
+}
+
+.category--chosen {
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.category--chosen img {
+  filter: none;
+}
+
+.category__items {
+  border: 1px solid var(--white);
+  border-bottom: none;
+  list-style: none;
+  padding: 40px;
+}
+
+.category__item {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.category__item p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#category::before {
+  display: inline-block;
+  transform: scale(0.65);
+  content: url("../../img/gentse-feesten-icoontjes/category.svg");
+  filter: invert(100%);
+}
+
+.preview {
+  border: 1px solid var(--white);
+  border-top: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.preview .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+}
+
+.preview .button--on {
+  background-color: var(--red);
+}
+
+.preview .button::before {
+  filter: invert();
+}
+
+.preview .button--on::before {
+  filter: none;
+}
+
+#grid-button::before {
+  transform: scale(0.65);
+  content: url("../../img/gentse-feesten-icoontjes/raster.svg");
+}
+
+#list-button::before {
+  transform: scale(0.65);
+  content: url("../../img/gentse-feesten-icoontjes/list.svg");
+}
+
+.filter__search {
+  border: 1px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.filter__search input {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  color: var(--white);
+}
+
+.filter__search input::placeholder {
+  color: var(--white);
+}
+
+.filter__search button {
+  background-color: transparent;
+  border: none;
+}
+
+#search-button::before {
+  transform: scale(0.65);
+  content: url("../../img/gentse-feesten-icoontjes/search.svg");
+  filter: invert();
+}
+
+.grid {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid .list__title {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-decoration: none;
+  margin-top: 100px;
+}
+
+.grid .list__title img {
+  filter: invert();
+}
+
+.grid .events {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grid .event {
+  width: 100%;
+}
+
+.grid .euro {
+  display: none;
+}
+
+.grid--list .event__image {
+  display: none;
+}
+
+.grid--list .event__info {
+  width: 100%;
+  position: relative;
+}
+
+.grid--list .event__link {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.grid--list .event__info p {
+  order: 1;
+  padding: 0;
+}
+
+.grid--list .event__title {
+  order: 2;
+}
+
+.grid--list .red__field {
+  order: 3;
+  background-color: transparent;
+  color: var(--white);
+  padding: 0;
+  margin: 0;
+}
+
+.grid--list .euro {
+  display: block;
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+  border: 1px solid var(--white);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+}
+
+.euro img {
+  transform: scale(0.65);
+  filter: invert();
+}
+
+.grid--list .euro--free {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .filter {
+    margin-top: 300px ;
+  }
+  .title {
+    display: none;
+  }
+  .header__bottom {
+    width: 100%;
+  }
+  .title__container::after {
+    width: 290px;
+  }
+  .header--red .header__nav--right {
+    width: 290px;
+  }
+  .days {
+    display: flex;
+    width: calc(130px * 5);
+    z-index: 10;
+  }
+  .day {
+    width: 130px;
+  }
+  .day:nth-child(2) {
+    margin-right: 0;
+  }
+  .day:nth-child(9) {
+    margin-left: 0;
+  }
+  .day:nth-child(4) .day__items, .day:nth-child(5) .day__items, .day:nth-child(9) .day__items, .day:nth-child(10) .day__items {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  .day:nth-child(4) {
+    border: 2px solid var(--white);
+    border-top: none;
+    border-left: none;
+  }
+  .day:nth-child(10) {
+    border: 2px solid var(--white);
+    border-bottom: none;
+    border-right: none;
+  }
+  .day__items--active {
+    text-decoration: underline;
+  }
+  .category__items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-height: 900px;
+  }
+  .category__items li {
+    width: 48%;
+  }
+  .grid .events {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .grid .event {
+    width: calc((100% - 20px) / 2);
+  }
+  .grid--list .events {
+    flex-direction: column;
+  }
+  .grid--list .event {
+    width: 100%;
+  }
+  .grid--list .event__link {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+  .grid--list .event__info {
+    padding: 0;
+  }
+  .grid--list .event__title {
+    border: 1px solid var(--white);
+    height: 100%;
+    width: 60%;
+    padding: 40px 20px;
+  }
+  .grid--list .red__field {
+    width: 25%;
+  }
+  .grid--list p {
+    width: 15%;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .filter {
+    margin-top: 400px;
+    position: relative;
+  }
+  .title__container::after {
+    width: calc(120px * 4 + 30px);
+  }
+  .header--red .header__nav--right {
+    width: calc(120px * 4 + 30px);
+  }
+  .days {
+    display: flex;
+    align-items: center;
+    width: calc(120px * 10);
+    z-index: 90;
+    margin-right: 30px;
+  }
+  .day {
+    width: 120px;
+  }
+  .day:nth-child(7) .day__items, .day:nth-child(8) .day__items, .day:nth-child(9) .day__items, .day:nth-child(10) .day__items {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  .day:nth-child(4) .day__items, .day:nth-child(5) .day__items {
+    background-color: var(--red);
+    color: var(--black);
+  }
+  .day:nth-child(4), .day:nth-child(10) {
+    border: none;
+  }
+  .day:nth-child(7), .day:nth-child(8), .day:nth-child(9) {
+    border: 2px solid var(--white);
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+  }
+  .day__items--active {
+    transform: scaleY(1.3);
+  }
+  .filter-title {
+    position: absolute;
+    top: 150px;
+    left: -60px;
+    font-size: 9.4rem;
+    display: block;
+    color: var(--white);
+    transform: rotate(-90deg);
+  }
+  .filter-title span {
+    background-color: var(--black);
+    padding: 0 20px;
+  }
+  .filter-title:before {
+    content: "";
+    display: block;
+    z-index: -10;
+    position: absolute;
+    background-color: var(--red);
+    width: 120%;
+    height: 180px;
+    top: -60px;
+    left: -50px;
+  }
+  .filter__box {
+    margin-left: 250px;
+  }
+  .filters {
+    flex-direction: row;
+    height: 80px;
+    width: 100%;
+  }
+  .filter__categories p {
+    display: inline-block;
+  }
+  .filter__categories li {
+    width: fit-content;
+  }
+  .category {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    padding: 10px 40px;
+    gap: 10px;
+  }
+  .filter__checkboxes {
+    width: 100%;
+  }
+  .grid .event {
+    width: calc((100% - 40px) / 3);
+  }
+  .grid--list .event {
+    width: 100%;
+    border-top: 1px solid var(--white);
+  }
+}

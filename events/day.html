@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/components/header.css" />
     <link rel="stylesheet" href="../css/components/hamburger.css" />
+    <link rel="stylesheet" href="../css/components/events.css" />
+    <link rel="stylesheet" href="../css/components/news-home.css" />
     <link rel="stylesheet" href="../css/components/day.css" />
     <link rel="stylesheet" href="../css/components/footer.css" />
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
@@ -30,7 +32,7 @@
               <a href="../news.html">Nieuws</a>
             </li>
             <li class="header__link header__link--active text--w-medium">
-              <a href="../events/day.html?day=15">Programma</a>
+              <a href="../day.html?day=15">Programma</a>
             </li>
             <li class="header__link text--w-medium">
               <a href="#">Praktisch</a>
@@ -58,45 +60,110 @@
       </div>
       <section class="header__bottom padding-container">
         <div class="title__container">
-          <h1 class="title">Ontdek Ons Nieuws</h1>
+          <h1 class="title" id="title">Ontdek Ons Nieuws</h1>
+          <ul class="days">
+            <li class="day">
+              <a class="day__items" id="day15" href="./day.html?day=15">
+                <h2 class="day__title">Vr</h2>
+                <p class="day__date">15 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day16" href="./day.html?day=16">
+                <h2 class="day__title">Za</h2>
+                <p class="day__date">16 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day17" href="./day.html?day=17">
+                <h2 class="day__title">Zo</h2>
+                <p class="day__date">17 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day18" href="./day.html?day=18">
+                <h2 class="day__title">Ma</h2>
+                <p class="day__date">18 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day19" href="./day.html?day=19">
+                <h2 class="day__title">Di</h2>
+                <p class="day__date">19 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day20" href="./day.html?day=20">
+                <h2 class="day__title">Wo</h2>
+                <p class="day__date">20 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day21" href="./day.html?day=21">
+                <h2 class="day__title">Do</h2>
+                <p class="day__date">21 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day22" href="./day.html?day=22">
+                <h2 class="day__title">Vr</h2>
+                <p class="day__date">22 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day23" href="./day.html?day=23">
+                <h2 class="day__title">Za</h2>
+                <p class="day__date">23 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day24" href="./day.html?day=24">
+                <h2 class="day__title">Zo</h2>
+                <p class="day__date">24 juli</p>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
     </header>
-    <main>
-      <section class="filter" id="filter">
-        <div class="category_title">
-          <h2>Filter</h2>
-        </div>
-        <div class="filter_box">
+    <main class="layout-container">
+      <section class="filter padding-container" id="filter">
+        <h2 class="filter-title">
+          <span>Filter</span>
+        </h2>
+        <div class="filter__box">
           <div class="filters">
-            <ul class="filter_categories">
-              <li><a href="#" class="category" id="party">Feestpleinen</a></li>
-              <li class="chosen">
-                <a href="#" class="category" id="category">Categorie</a>
+            <ul class="filter__categories">
+              <li><a href="#" class="category"><p>Feestpleinen</p><img src="../img/gentse-feesten-icoontjes/marker.svg" alt="locatie"></a></li>
+              <li>
+                <a href="#" class="category category--chosen"><p>Categorie</p><img src="../img/gentse-feesten-icoontjes/category.svg" alt="locatie"></a>
               </li>
-              <li><a href="#" class="category" id="time">Tijd</a></li>
-              <li><a href="#" class="category" id="kids">Kinderen</a></li>
+              <li><a href="#" class="category"><p>Tijd</p><img src="../img/gentse-feesten-icoontjes/clock.svg" alt="locatie"></a></li>
+              <li><a href="#" class="category"><p>Kinderen</p><img src="../img/gentse-feesten-icoontjes/user.svg" alt="locatie"></a></li>
             </ul>
-            <form>
-              <input type="checkbox" name="rolstoel" id="rolstoel" /><input
-                type="checkbox"
-                name="Gratis"
-                id="Gratis"
-              /><label for="Gratis">Gratis</label>
+            <form class="filter__checkboxes">
+              <input type="checkbox" name="rolstoel" id="rolstoel" /><label
+                for="Gratis"
+                ><img src="../img/gentse-feesten-icoontjes/wheelchair.svg" alt="rolstoel"></label
+              >
+              <input type="checkbox" name="Gratis" id="Gratis" /><label
+                for="Gratis"
+                >Gratis</label
+              >
             </form>
           </div>
-          <ul class="category_items" id="categories"></ul>
+          <ul class="category__items" id="categories"></ul>
           <form class="preview">
-            <button type="button" class="grid on"></button>
-            <button type="button" class="list"></button>
+            <button type="button" class="button button--on" id="grid-button"></button>
+            <button type="button" class="button" id="list-button"></button>
           </form>
-          <form>
-            <input type="text" />
-            <button type="submit"></button>
+          <form class="filter__search" action="../search.html" method="get">
+            <input type="text" name="search" placeholder="Doorzoek het programma..." />
+            <button type="submit" id="search-button"></button>
           </form>
         </div>
         <ul class="grid" id="list"></ul>
-      </section>  
+      </section>
     </main>
     <footer>
       <section class="footer__top layout-container">
@@ -173,7 +240,9 @@
             </li>
             <li>
               <a href="#"
-                ><img src="../img/partner-stad-gent.svg" alt="partner stad gent"
+                ><img
+                  src="../img/partner-stad-gent.svg"
+                  alt="partner stad gent"
               /></a>
             </li>
             <li>
@@ -221,40 +290,40 @@
           <a href="../news.html">Nieuws</a>
         </li>
         <li class="hamburger__item hamburger__item--main hamburger__item--img">
-          <a href="../events/day.html?day=15">Programma</a>
+          <a href="../day.html?day=15">Programma</a>
           <ul class="hamburger__items hamburger__items--second">
             <li class="hamburger__item">
-              <a href="../events/day.html?day=15">Vrijdag 15 juli</a>
+              <a href="../day.html?day=15">Vrijdag 15 juli</a>
             </li>
             <li class="hamburger__item">
-              <a href="../events/day.html?day=16">Zaterdag 16 juli</a>
+              <a href="../day.html?day=16">Zaterdag 16 juli</a>
             </li>
             <li class="hamburger__item">
-              <a href="../events/day.html?day=17">Zondag 17 juli</a>
+              <a href="../day.html?day=17">Zondag 17 juli</a>
             </li>
             <li class="hamburger__item">
-              <a href="../events/day.html?day=18">Maandag 18 juli</a>
+              <a href="../day.html?day=18">Maandag 18 juli</a>
             </li>
             <li class="hamburger__item">
-              <a href="../events/day.html?day=19">Dinsdag 19 juli</a>
+              <a href="../day.html?day=19">Dinsdag 19 juli</a>
             </li>
             <li class="hamburger__item">
-              <a href="../events/day.html?day=20">Woensdag 20 juli</a>
+              <a href="../day.html?day=20">Woensdag 20 juli</a>
             </li>
             <li class="hamburger__item">
-              <a href="../events/day.html?day=21">Donderdag 21 juli</a>
+              <a href="../day.html?day=21">Donderdag 21 juli</a>
             </li>
             <li class="hamburger__item">
-              <a href="../events/day.html?day=22">Vrijdag 22 juli</a>
+              <a href="../day.html?day=22">Vrijdag 22 juli</a>
             </li>
             <li class="hamburger__item">
-              <a href="../events/day.html?day=23">Zaterdag 23 juli</a>
+              <a href="../day.html?day=23">Zaterdag 23 juli</a>
             </li>
             <li class="hamburger__item">
-              <a href="../events/day.html?day=24">Zondag 24 juli</a>
+              <a href="../day.html?day=24">Zondag 24 juli</a>
             </li>
             <li class="hamburger__item">
-              <a href="../events/day.html?day=15">Programma</a>
+              <a href="../day.html?day=15">Programma</a>
             </li>
           </ul>
         </li>
