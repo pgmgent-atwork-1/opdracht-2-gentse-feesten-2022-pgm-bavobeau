@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/components/header.css" />
     <link rel="stylesheet" href="../css/components/hamburger.css" />
+    <link rel="stylesheet" href="../css/components/events.css" />
+    <link rel="stylesheet" href="../css/components/day.css" />
     <link rel="stylesheet" href="../css/components/detail.css" />
     <link rel="stylesheet" href="../css/components/footer.css" />
     <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
@@ -30,7 +32,7 @@
               <a href="../news.html">Nieuws</a>
             </li>
             <li class="header__link header__link--active text--w-medium">
-              <a href="../events/day.html?day=15">Programma</a>
+              <a href="../day.html?day=15">Programma</a>
             </li>
             <li class="header__link text--w-medium">
               <a href="#">Praktisch</a>
@@ -58,57 +60,88 @@
       </div>
       <section class="header__bottom padding-container">
         <div class="title__container">
-          <h1 class="title">Ontdek Ons Nieuws</h1>
+          <h1 class="title" id="title">Ontdek Ons Nieuws</h1>
+          <ul class="days">
+            <li class="day">
+              <a class="day__items" id="day15" href="./day.html?day=15">
+                <h2 class="day__title">Vr</h2>
+                <p class="day__date">15 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day16" href="./day.html?day=16">
+                <h2 class="day__title">Za</h2>
+                <p class="day__date">16 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day17" href="./day.html?day=17">
+                <h2 class="day__title">Zo</h2>
+                <p class="day__date">17 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day18" href="./day.html?day=18">
+                <h2 class="day__title">Ma</h2>
+                <p class="day__date">18 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day19" href="./day.html?day=19">
+                <h2 class="day__title">Di</h2>
+                <p class="day__date">19 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day20" href="./day.html?day=20">
+                <h2 class="day__title">Wo</h2>
+                <p class="day__date">20 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day21" href="./day.html?day=21">
+                <h2 class="day__title">Do</h2>
+                <p class="day__date">21 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day22" href="./day.html?day=22">
+                <h2 class="day__title">Vr</h2>
+                <p class="day__date">22 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day23" href="./day.html?day=23">
+                <h2 class="day__title">Za</h2>
+                <p class="day__date">23 juli</p>
+              </a>
+            </li>
+            <li class="day">
+              <a class="day__items" id="day24" href="./day.html?day=24">
+                <h2 class="day__title">Zo</h2>
+                <p class="day__date">24 juli</p>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
     </header>
     <main>
-      <section class="detail">
-        <a href="day.html?day=15" class="back">
-          <div class="arrow left"></div>
+      <section class="detail layout-container padding-container">
+        <a href="javascript:history.back()" class="back">
+          <div class="arrow arrow--left">
+            <div class="arrow__shaft"></div>
+          </div>
           <span id="date">Overzicht </span>
         </a>
         <div id="event"></div>
         <div class="more">
-          <h2>Andere evenementen van deze organisator</h2>
-          <ul class="events list" id="events"></ul>
+          <h2 class="text--c-white">Andere evenementen van deze organisator</h2>
+          <ul class="grid" id="events"></ul>
         </div>
         <div class="more">
-          <h2>Nog te beleven op deze locatie</h2>
-          <ul class="events list" id="location"></ul>
-        </div>
-      </section>
-      <section class="content_bottom">
-        <div class="cta_media">
-          <a href="#" class="red_cta">
-            <h2>Spot onze foto's</h2>
-            <div class="arrow black"></div>
-          </a>
-          <a href="#" class="red_cta">
-            <div class="arrow left black"></div>
-            <h2 class="h2_right">Aanschouw onze video's</h2>
-          </a>
-        </div>
-        <div class="newsletter">
-          <div class="newsletter_intro">
-            <h2>Blijf op de hoogte</h2>
-            <p>Schrijf je in op de nieuwsbrief van de Gentse Feesten</p>
-          </div>
-          <form class="newsletter_subscribe">
-            <input
-              placeholder="Jouw e-mailadres"
-              type="email"
-              maxlength="64"
-              required="required"
-            />
-            <button class="red_button">Inschrijven</button>
-          </form>
-          <div class="disclaimer">
-            <span
-              >De stad Gent zal de persoonsgegevens die je invult met respect
-              voor jouw <a href="#" class="white">privacy</a> behandelen</span
-            >
-          </div>
+          <h2 class="text--c-white">Nog te beleven op deze locatie</h2>
+          <ul class="grid grid--list" id="location"></ul>
         </div>
       </section>
     </main>

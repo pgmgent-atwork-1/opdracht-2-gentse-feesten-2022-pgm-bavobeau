@@ -39,14 +39,14 @@
       const html = event.map((event) => {
         $date.innerHTML += `${event.day_of_week} ${event.day} juli`;
         return `
-      <div class="event_main">
-        <h1 class="event_title">${event.title}</h1>
-        <div class="red_field">${event.location}</div>
-        <div class="event_time">${event.start} - ${event.end}</div>
+      <div class="event__main">
+        <h1 class="event__title text--c-white">${event.title}</h1>
+        <div class="red__field">${event.location}</div>
+        <div class="event__time text--c-white">${event.start} - ${event.end}</div>
       </div>
-      <p class="event_desc">${event.description}</p>
+      <p class="event__desc">${event.description}</p>
       <img src="${checkContent(event.image.full)}">
-      <ul class="event_info">
+      <ul class="event__info">
         <li><span>Organisator:</span>${event.organizer}</li>
         <li><span>Website:</span><a href="${event.url}"></a>${event.url}</li>
         <li><span>Categorieën:</span><ul>${event.category.map((element) => {return `<li>${element}</li>`})}</ul></li>
@@ -65,16 +65,18 @@
       const html = events.filter(event => event.organizer === organizer)
       .slice(0,4).map(event => {
         return `
-        <li class="event">
-        <a href="detail.html?day=${event.day}&slug=${event.slug}" class="event_link">
-          <div class="event_image">
+      <li class="event">
+        <a href="detail.html?day=${event.day}&slug=${event.slug}" class="event__link">
+          <div class="event__image">
             <img src="${checkContent(event.image.full)}" class="event_image">
           </div>
-          <div class="event_info">
-            <h3 class="event_title">${event.title}</h3>
-            <div class="red_field">${event.location}</div>
+          <div class="event__info">
+            <h3 class="event__title">${event.title}</h3>
+            <div class="red__field">${event.location}</div>
             <p>${event.day_of_week.slice(0,2)} ${event.day} juli  ${event.start}</p>
-            <img src="../static/img/gentse-feesten-icoontjes/euro.svg" class="euro ${checkContent(event.ticket)}">
+            <div class="euro ${checkContent(event.ticket)}">
+              <img src="../img/gentse-feesten-icoontjes/euro.svg">
+            </div>
           </div>
         </a>
       </li>
@@ -88,18 +90,20 @@
     const renderLocation = (events, active) => {
       const location = active[0].location;
       const html = events.filter(event => event.location === location)
-      .map(event => {
+      .slice(0,4).map(event => {
         return `
-        <li class="event">
-        <a href="detail.html?day=${event.day}&slug=${event.slug}" class="event_link">
-          <div class="event_image">
+      <li class="event">
+        <a class="event__link href="detail.html?day=${event.day}&slug=${event.slug}" class="event_link">
+          <div class="event__image">
             <img src="${checkContent(event.image.full)}" class="event_image">
           </div>
-          <div class="event_info">
-            <h3 class="event_title">${event.title}</h3>
-            <div class="red_field">${event.location}</div>
-            <p>${event.day_of_week.slice(0,2)} ${event.day} juli  ${event.start}</p>
-            <img src="../static/img/gentse-feesten-icoontjes/euro.svg" class="euro ${checkContent(event.ticket)}">
+          <div class="event__info">
+            <h3 class="event__title text--c-white">${event.title}</h3>
+            <div class="red__field">${event.location}</div>
+            <p class="text--c-white">${event.day_of_week.slice(0,2)} ${event.day} juli  ${event.start}</p>
+            <div class="euro ${checkContent(event.ticket)}">
+              <img src="../img/gentse-feesten-icoontjes/euro.svg">
+            </div>
           </div>
         </a>
       </li>

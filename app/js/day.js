@@ -93,6 +93,7 @@
                             <p>${event.start} u.</p>
                             <div class="euro ${checkTicket(event.ticket)}">
                               <img src="../img/gentse-feesten-icoontjes/euro.svg">
+                            </div>
                           </div>
                         </a>
                       </li>`;

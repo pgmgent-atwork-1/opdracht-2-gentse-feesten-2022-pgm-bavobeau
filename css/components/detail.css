@@ -1,0 +1,16 @@
+.title__container {
+  display: none;
+}
+
+.detail {
+  margin-top: 50px;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  text-decoration: none;
+  gap: 20px;
+  text-transform: uppercase;
+}

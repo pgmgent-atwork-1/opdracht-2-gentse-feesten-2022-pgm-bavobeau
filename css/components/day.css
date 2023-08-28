@@ -212,7 +212,7 @@
   position: relative;
 }
 
-.grid--list .event__link {
+.grid--list .event__info {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -323,11 +323,12 @@
   }
   .grid--list .events {
     flex-direction: column;
+    width: 80%;
   }
   .grid--list .event {
     width: 100%;
   }
-  .grid--list .event__link {
+  .grid--list .event__info {
     flex-direction: row;
     align-items: center;
     width: 100%;
