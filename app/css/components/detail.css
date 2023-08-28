@@ -40,3 +40,137 @@
   display: flex;
   gap: 5px ;
 }
+
+.event__map {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.red__area {
+  background-color: var(--red);
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+.red__area a {
+  color: var(--black);
+}
+
+.red__field--black {
+  background-color: var(--black);
+  color: var(--white);
+  width: fit-content;
+}
+
+.red__field--border {
+  border: 1px solid var(--black);
+  width: fit-content;
+}
+
+.more {
+  margin-top: 100px;
+}
+
+.more h2 {
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.more .grid {
+  gap: 20px;
+}
+
+.more .grid--list {
+  gap: 0;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.socials li {
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 700px) {
+  .title__container {
+    display: flex;
+  }
+  .detail {
+    margin-top: 300px;
+  }
+  .event__details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .event__details li {
+    width: 50%;
+  }
+  .socials {
+    margin-bottom: 100px;
+  }
+  .event__map {
+    flex-direction: row;
+    height: 400px;
+  }
+  .red__area {
+    width: 40%;
+  }
+  .event__map img {
+    width: 60%;
+    object-fit: cover;
+  }
+  .grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1000px) {
+  #event {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-left: 5%;
+  }
+  .event__main {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  #event img {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .event__details li {
+    width: 40%;
+  }
+  .socials {
+    grid-column-start: 2;
+    gap: 40px;
+  }
+  .socials li {
+    transform: scale(1.5);
+  }
+  .red__area {
+    width: 30%;
+  }
+  .event__map img {
+    width: 70%;
+  }
+}

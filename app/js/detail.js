@@ -53,18 +53,10 @@
         <li><a href="#">${event.category.map((element) => {return `<p>${element}</p>`})}</a></li>
       </ul>
       <ul class="socials">
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
+        <li><a href="#"><img src="../img/gentse-feesten-icoontjes/twitter.svg" alt=""></a></li>
+        <li><a href="#"><img src="../img/gentse-feesten-icoontjes/facebook.svg" alt=""></a></li>
+        <li><a href="#"><img src="../img/gentse-feesten-icoontjes/pinterest.svg" alt=""></a></li>
       </ul>
-      <div class="event__map">
-        <div class="red__area">
-          <div class="red__field red__field--black">${event.location}</div>
-          <a href="#">Open in Google Maps</a>
-          <div class="red__field red__field--transparant">${event.location}</div>
-        </div>
-        <img src="../img/maps.png">
-      </div>
       `;
       }).join("");
 
@@ -85,7 +77,7 @@
           <div class="event__info">
             <h3 class="event__title">${event.title}</h3>
             <div class="red__field">${event.location}</div>
-            <p>${event.day_of_week.slice(0,2)} ${event.day} juli  ${event.start}</p>
+            <p>${event.day_of_week.slice(0,2)} ${event.day} juli  ${event.start} u.</p>
             <div class="euro ${checkContent(event.ticket)}">
               <img src="../img/gentse-feesten-icoontjes/euro.svg">
             </div>
@@ -112,7 +104,7 @@
           <div class="event__info">
             <h3 class="event__title text--c-white">${event.title}</h3>
             <div class="red__field">${event.location}</div>
-            <p class="text--c-white">${event.day_of_week.slice(0,2)} ${event.day} juli  ${event.start}</p>
+            <p class="text--c-white">${event.day_of_week.slice(0,2)} ${event.day} juli  ${event.start} u.</p>
             <div class="euro ${checkContent(event.ticket)}">
               <img src="../img/gentse-feesten-icoontjes/euro.svg">
             </div>
